@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updated_at": "2026-11-11",
-  "execution": "Piloto y panorama con gpt-6.1-sol; prioridad P01/P02/P03 según D001",
+  "execution": "T01/T02/P01/P02 completadas con gpt-6.1-sol y revisadas; P03 sintetizada; próxima tanda V01–V03 pendiente",
   "tasks": [
     {
       "id": "T00",
@@ -41,7 +41,8 @@
         "minutos": 30,
         "intentos_maximos": 2,
         "limite_duro": false
-      }
+      },
+      "reviewed_by": "coordinador"
     },
     {
       "id": "T02",
@@ -50,7 +51,7 @@
       "depends_on": [
         "T00"
       ],
-      "status": "en_curso",
+      "status": "aceptada",
       "owner": "/root/piloto_agua",
       "output": "resultados/T02/",
       "acceptance": [
@@ -65,7 +66,8 @@
         "minutos": 30,
         "intentos_maximos": 2,
         "limite_duro": false
-      }
+      },
+      "reviewed_by": "coordinador"
     },
     {
       "id": "T03",
@@ -286,7 +288,7 @@
       "depends_on": [
         "T00"
       ],
-      "status": "en_curso",
+      "status": "aceptada",
       "owner": "/root/piloto_airflow",
       "output": "resultados/P01/",
       "acceptance": [
@@ -299,7 +301,8 @@
       "budget": {
         "tokens_orientativos": 8000,
         "limite_duro": false
-      }
+      },
+      "reviewed_by": "coordinador"
     },
     {
       "id": "P02",
@@ -308,7 +311,7 @@
       "depends_on": [
         "T00"
       ],
-      "status": "en_curso",
+      "status": "aceptada",
       "owner": "/root/panorama_webs",
       "output": "resultados/P02/",
       "acceptance": [
@@ -321,7 +324,8 @@
       "budget": {
         "tokens_orientativos": 8000,
         "limite_duro": false
-      }
+      },
+      "reviewed_by": "coordinador"
     },
     {
       "id": "P03",
@@ -331,7 +335,7 @@
         "P01",
         "P02"
       ],
-      "status": "pendiente",
+      "status": "aceptada",
       "owner": "coordinador",
       "output": "resultados/P03/",
       "acceptance": [
@@ -344,7 +348,65 @@
       "budget": {
         "tokens_orientativos": 8000,
         "limite_duro": false
-      }
+      },
+      "reviewed_by": "coordinador"
+    },
+    {
+      "id": "V01",
+      "title": "Viabilidad: recuperar informes y datos de aire",
+      "role": "inventario_basico",
+      "depends_on": [
+        "P03"
+      ],
+      "status": "lista",
+      "owner": null,
+      "output": "resultados/V01/",
+      "acceptance": [
+        "Leer alcance en resultados/P03/informe.md",
+        "Entregar evidencia disponible/faltante y criterio de continuar",
+        "Fuentes/versiones y límites sin ejecutar producción"
+      ],
+      "blocker": null,
+      "model": "gpt-6.1-sol",
+      "budget": null
+    },
+    {
+      "id": "V02",
+      "title": "Viabilidad: comparar exportadores y contratos ambientales",
+      "role": "inventario_basico",
+      "depends_on": [
+        "P03"
+      ],
+      "status": "lista",
+      "owner": null,
+      "output": "resultados/V02/",
+      "acceptance": [
+        "Leer alcance en resultados/P03/informe.md",
+        "Entregar evidencia disponible/faltante y criterio de continuar",
+        "Fuentes/versiones y límites sin ejecutar producción"
+      ],
+      "blocker": null,
+      "model": "gpt-6.1-sol",
+      "budget": null
+    },
+    {
+      "id": "V03",
+      "title": "Viabilidad: procedencia y versiones de datos ciudadanos",
+      "role": "inventario_basico",
+      "depends_on": [
+        "P03"
+      ],
+      "status": "lista",
+      "owner": null,
+      "output": "resultados/V03/",
+      "acceptance": [
+        "Leer alcance en resultados/P03/informe.md",
+        "Entregar evidencia disponible/faltante y criterio de continuar",
+        "Fuentes/versiones y límites sin ejecutar producción"
+      ],
+      "blocker": null,
+      "model": "gpt-6.1-sol",
+      "budget": null
     }
   ]
 }

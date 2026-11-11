@@ -1,0 +1,92 @@
+{
+  "task": "P02",
+  "status": "en_revision",
+  "observed_at": "2026-11-11",
+  "readme_count": 5,
+  "evidence": [
+    {
+      "id": "P02-E01",
+      "claim": "Listado de 13 nombres; cobertura parcial",
+      "classification": "observado_directamente",
+      "source": "inventario/cmasudd.json",
+      "locator": "repositories[0:13]; source; coverage",
+      "version_or_sha256": "",
+      "observed_at": "2026-11-11",
+      "method": "Lectura local del inventario",
+      "limitations": "Inventario previo, no se repitió paginación ni listado",
+      "visibility": "interna_plan"
+    },
+    {
+      "id": "P02-E02",
+      "claim": "Portal React/Vite, canonicidad y operación declarados",
+      "classification": "declarado_por_documentacion",
+      "source": "https://github.com/cmasudd/SensorsWebApp/blob/desarrollo/README.md",
+      "locator": "README: introducción, Repositorios, Desarrollo y verificación",
+      "version_or_sha256": "4c0aea407f76b2b51edba66f07cae17c737e3d56",
+      "observed_at": "2026-11-11",
+      "method": "GitHub fetch_file README.md",
+      "limitations": "No se verificó servidor, código o rama productiva real",
+      "visibility": "publica"
+    },
+    {
+      "id": "P02-E03",
+      "claim": "Aire Aconcagua documenta exportación MariaDB, CSV, API reciente y modo Escolar",
+      "classification": "declarado_por_documentacion",
+      "source": "https://github.com/cmasudd/aireaconcagua/blob/main/README.md",
+      "locator": "README: Datos históricos; Columnas publicadas; Actualización horaria",
+      "version_or_sha256": "1590e8f5edcd19b64739e04acee60be0ee981ff9",
+      "observed_at": "2026-11-11",
+      "method": "GitHub fetch_file README.md",
+      "limitations": "No se ejecutaron exportador, tests ni consultas; idempotencia solo declarada",
+      "visibility": "publica"
+    },
+    {
+      "id": "P02-E04",
+      "claim": "Aire Aysén documenta fuente Looker, promedios horarios, grupos interior/exterior y límites de licencia",
+      "classification": "declarado_por_documentacion",
+      "source": "https://github.com/cmasudd/aireAysen/blob/main/README.md",
+      "locator": "README: Fuente; Datos publicados; Licenciamiento propuesto",
+      "version_or_sha256": "483f5a2a5949b68857db6eb7cb1166ac69c6291a",
+      "observed_at": "2026-11-11",
+      "method": "GitHub fetch_file README.md",
+      "limitations": "No se verificó fuente Looker, normas, datasets o licencias; no se adoptan referencias regulatorias como verificadas",
+      "visibility": "publica"
+    },
+    {
+      "id": "P02-E05",
+      "claim": "CalidadAgua declara preparación, ocho estaciones, CSV/API y límites de nivel/licencia",
+      "classification": "declarado_por_documentacion",
+      "source": "https://github.com/cmasudd/calidadAgua/blob/main/README.md",
+      "locator": "README: introducción; Licenciamiento propuesto; Datos y funcionamiento; Automatización",
+      "version_or_sha256": "4baf81b0eb73b25f05e47bc1126a83b06f158d2c",
+      "observed_at": "2026-11-11",
+      "method": "GitHub fetch_file README.md",
+      "limitations": "No se verificaron mediciones, código o sitios; no son cotas comparables por sí mismas",
+      "visibility": "publica"
+    },
+    {
+      "id": "P02-E06",
+      "claim": "Voluntariosxagua documenta monitoreo mensual, siete puntos y generación desde planilla/fotos",
+      "classification": "declarado_por_documentacion",
+      "source": "https://github.com/cmasudd/voluntariosxagua/blob/main/README.md",
+      "locator": "README: Propósito; Monitoreo y datos; Descarga y uso responsable; Decisiones pendientes",
+      "version_or_sha256": "93ca0b859557e5b730066563028d9de8cbbeaa46",
+      "observed_at": "2026-11-11",
+      "method": "GitHub fetch_file README.md",
+      "limitations": "No se leyó planilla ni datos personales; cobertura, unidades, coordenadas, normas y flujo Kobo pendientes",
+      "visibility": "publica"
+    },
+    {
+      "id": "P02-E08",
+      "claim": "El usuario declara creación de webs y administración del portal; revisión inicial documenta HTTP 200 y posible duplicado",
+      "classification": "declarado_por_usuario",
+      "source": "docs/01-revision-inicial.md",
+      "locator": "E004, E008, E009, E010 y párrafos posteriores",
+      "version_or_sha256": "",
+      "observed_at": "2026-11-11",
+      "method": "Lectura local de declaración registrada por coordinador",
+      "limitations": "Declaración fechada 2026-11-11 en conversación; no demuestra autoría exclusiva ni operación real",
+      "visibility": "interna_plan"
+    }
+  ]
+}

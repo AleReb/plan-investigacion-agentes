@@ -1,0 +1,906 @@
+{
+  "task": "P01",
+  "status": "en_revision",
+  "date": "2026-11-11",
+  "evidence": [
+    {
+      "id": "P01-E01",
+      "claim": "100 registros agrupados una vez cada uno; familias por nombre; cobertura global no revalidada",
+      "classification": "observado_directamente",
+      "source": "/home/ale/Documents/repos/plan-investigacion-agentes/inventario/github.json",
+      "locator": "/repositories/0 a /repositories/99; /coverage",
+      "version_or_sha256": "fe5ee2d48fb3c0d3df9d8717cb24826d0c3d8c0db1fb82285bb06565816d2e92",
+      "observed_at": "2026-11-11",
+      "method": "Lectura JSON y conteo; agrupación editorial",
+      "limitations": "Nombres no verifican función, genealogía, autoría ni operación",
+      "visibility": "mixta"
+    },
+    {
+      "id": "P01-E02",
+      "claim": "README describe estación multiparamétrica en construcción, enlaza informes laboratorio/SINCA y asigna a Alejandro firmware/comunicaciones; no se verifican validación ni precisiones declaradas.",
+      "classification": "declarado_por_documentacion",
+      "source": "https://github.com/AleReb/estacion-calidad-aire/blob/main/README.md",
+      "locator": "README.md, secciones Características, Índice de informes y manuales, Equipo de trabajo, Licencia",
+      "version_or_sha256": "06d308e26fcde0c921413ee09add16583e6240c6",
+      "version_kind": "Git blob SHA del README, no commit del repositorio",
+      "observed_at": "2026-11-11",
+      "method": "GitHub fetch_file README.md líneas 1–160; respuesta sin error",
+      "limitations": "Lectura documental, no código, datasets, informes enlazados ni ejecución; atribución y licencias declaradas, no auditoría independiente.",
+      "visibility": "public según inventario"
+    },
+    {
+      "id": "P01-E03",
+      "claim": "README describe ingesta, procesamiento e interfaz MCP y declara 193 videos enriquecidos; conteo/calidad no reproducidos.",
+      "classification": "declarado_por_documentacion",
+      "source": "https://github.com/AleReb/cmas-mcp/blob/master/README.md",
+      "locator": "README.md, Objetivo del Proyecto, Estructura de Carpetas, Alcance Actual",
+      "version_or_sha256": "a2223eaef293296156173ce14b4b9dab76d8657e",
+      "version_kind": "Git blob SHA del README, no commit del repositorio",
+      "observed_at": "2026-11-11",
+      "method": "GitHub fetch_file README.md líneas 1–160; respuesta sin error",
+      "limitations": "Lectura documental, no código, datasets, informes enlazados ni ejecución; atribución y licencias declaradas, no auditoría independiente.",
+      "visibility": "public según inventario"
+    },
+    {
+      "id": "P01-E04",
+      "claim": "README declara códigos base para múltiples estaciones de calidad ambiental; no documenta evaluación.",
+      "classification": "declarado_por_documentacion",
+      "source": "https://github.com/AleReb/LineaBase/blob/main/README.md",
+      "locator": "README.md, líneas 1–2",
+      "version_or_sha256": "0bb85703c350aa2044930dccea950612d1930d72",
+      "version_kind": "Git blob SHA del README, no commit del repositorio",
+      "observed_at": "2026-11-11",
+      "method": "GitHub fetch_file README.md líneas 1–160; respuesta sin error",
+      "limitations": "Lectura documental, no código, datasets, informes enlazados ni ejecución; atribución y licencias declaradas, no auditoría independiente.",
+      "visibility": "public según inventario"
+    },
+    {
+      "id": "P01-E05",
+      "claim": "README describe firmware SAMD21 con temperatura, pH, EC, HR, OLED, RTC y CSV/SD; atribuye autoría a Alejandro y declara CC BY 4.0 sin verificar LICENSE.",
+      "classification": "declarado_por_documentacion",
+      "source": "https://github.com/AleReb/BIODIJESTOR2v08_7/blob/main/README.md",
+      "locator": "README.md, Descripción, Hardware Requerido, Autor, Licencia",
+      "version_or_sha256": "582550332224a96cfe79c9ecf9d415ed5603aadf",
+      "version_kind": "Git blob SHA del README, no commit del repositorio",
+      "observed_at": "2026-11-11",
+      "method": "GitHub fetch_file README.md líneas 1–160; respuesta sin error",
+      "limitations": "Lectura documental, no código, datasets, informes enlazados ni ejecución; atribución y licencias declaradas, no auditoría independiente.",
+      "visibility": "public según inventario"
+    },
+    {
+      "id": "P01-E06",
+      "claim": "README describe biblioteca MiniMadre/EAGLE/Arduino; atribuye autoría colectiva C+ y recopilación a Alejandro; declara CC BY-NC sin auditar derechos por artefacto.",
+      "classification": "declarado_por_documentacion",
+      "source": "https://github.com/AleReb/C-BibliotecaHardware/blob/main/README.md",
+      "locator": "README.md, Contenido del Repositorio, Autores y Recopilación, Licencia",
+      "version_or_sha256": "acde66062f69a69e316c56aa300b53dd5b3ddf0a",
+      "version_kind": "Git blob SHA del README, no commit del repositorio",
+      "observed_at": "2026-11-11",
+      "method": "GitHub fetch_file README.md líneas 1–160; respuesta sin error",
+      "limitations": "Lectura documental, no código, datasets, informes enlazados ni ejecución; atribución y licencias declaradas, no auditoría independiente.",
+      "visibility": "public según inventario"
+    },
+    {
+      "id": "P01-E07",
+      "claim": "Revisión inicial registra límites de cobertura y fuentes; no constituye auditoría científica",
+      "classification": "declarado_por_documentacion",
+      "source": "/home/ale/Documents/repos/plan-investigacion-agentes/docs/01-revision-inicial.md",
+      "locator": "tabla E002–E010 y párrafos finales",
+      "version_or_sha256": "aee72df8f47c8279390bef9fd8470c9161de4a007148dbe4039119cfa669d3e5",
+      "observed_at": "2026-11-11",
+      "method": "Lectura local en T01 reutilizada en P01",
+      "limitations": "No se reproducen inspecciones previas",
+      "visibility": "interna"
+    }
+  ],
+  "repository_map": [
+    {
+      "index_1based": 1,
+      "source_pointer": "/repositories/0",
+      "repository": "AleReb/proyectokeika",
+      "family": "F8",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 2,
+      "source_pointer": "/repositories/1",
+      "repository": "AleReb/keikap",
+      "family": "F8",
+      "classification": "inferencia_por_nombre",
+      "visibility": "private"
+    },
+    {
+      "index_1based": 3,
+      "source_pointer": "/repositories/2",
+      "repository": "AleReb/midi5",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 4,
+      "source_pointer": "/repositories/3",
+      "repository": "AleReb/humedadsuelokuscalla",
+      "family": "F2",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 5,
+      "source_pointer": "/repositories/4",
+      "repository": "AleReb/roboticamaker",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 6,
+      "source_pointer": "/repositories/5",
+      "repository": "AleReb/kuscalla-lorawan",
+      "family": "F2",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 7,
+      "source_pointer": "/repositories/6",
+      "repository": "AleReb/HUMEDAD_DE_SUELO",
+      "family": "F2",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 8,
+      "source_pointer": "/repositories/7",
+      "repository": "AleReb/Suelo-con-TTGO-LoRa32-y-LoRaWAN",
+      "family": "F2",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 9,
+      "source_pointer": "/repositories/8",
+      "repository": "AleReb/Gesti-n-y-Monitoreo-Ambiental-con-ESP32",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 10,
+      "source_pointer": "/repositories/9",
+      "repository": "AleReb/-Calidad-del-Aire-Avanzado",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 11,
+      "source_pointer": "/repositories/10",
+      "repository": "AleReb/Monitoreo-con-aceler-metro-GPS-y-GMS",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 12,
+      "source_pointer": "/repositories/11",
+      "repository": "AleReb/Monitoreo-y-Comunicaci-n-con-GSM-y-Display-OLED",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 13,
+      "source_pointer": "/repositories/12",
+      "repository": "AleReb/Control-de-Salidas-Digitales-con-Adafruit-IO",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 14,
+      "source_pointer": "/repositories/13",
+      "repository": "AleReb/Medidor-de-Corriente-con-Adafruit-ADS1015",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 15,
+      "source_pointer": "/repositories/14",
+      "repository": "AleReb/Pod-metro-y-Monitor-de-Posici-n-con-ADXL345",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 16,
+      "source_pointer": "/repositories/15",
+      "repository": "AleReb/Arduino-con-Visualizaci-n-LCD-y-Sensores",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 17,
+      "source_pointer": "/repositories/16",
+      "repository": "AleReb/Monitor-de-Aceleraci-n-en-Tres-Ejes-con-Display-LCD",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 18,
+      "source_pointer": "/repositories/17",
+      "repository": "AleReb/Control-de-Rat-n-con-Arduino-Leonardo-y-MPU6050",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 19,
+      "source_pointer": "/repositories/18",
+      "repository": "AleReb/Monitorizaci-n-de-Energ-a-con-ESP32-e-INA219-via-MQTT",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 20,
+      "source_pointer": "/repositories/19",
+      "repository": "AleReb/Comunicaci-n-LoRa-con-Arduino-MKR-1300",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 21,
+      "source_pointer": "/repositories/20",
+      "repository": "AleReb/Comunicaci-n-LoRa-con-Arduino-MKR-1300-y-Visualizaci-n-OLED",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 22,
+      "source_pointer": "/repositories/21",
+      "repository": "AleReb/-Comunicaci-n-LoRa-con-Arduino-MKR-1300-Visualizaci-n-OLED-y-Registro-en-SD",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 23,
+      "source_pointer": "/repositories/22",
+      "repository": "AleReb/Sensor-de-PH",
+      "family": "F2",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 24,
+      "source_pointer": "/repositories/23",
+      "repository": "AleReb/SDUPDATER",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 25,
+      "source_pointer": "/repositories/24",
+      "repository": "AleReb/ejemploUI",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 26,
+      "source_pointer": "/repositories/25",
+      "repository": "AleReb/mps25plantower",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 27,
+      "source_pointer": "/repositories/26",
+      "repository": "AleReb/ADS1256testspeed",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 28,
+      "source_pointer": "/repositories/27",
+      "repository": "AleReb/coyhaique",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 29,
+      "source_pointer": "/repositories/28",
+      "repository": "AleReb/balanzaRPI",
+      "family": "F8",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 30,
+      "source_pointer": "/repositories/29",
+      "repository": "AleReb/HIRI",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 31,
+      "source_pointer": "/repositories/30",
+      "repository": "AleReb/democarwifi",
+      "family": "F5",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 32,
+      "source_pointer": "/repositories/31",
+      "repository": "AleReb/democamaracar",
+      "family": "F5",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 33,
+      "source_pointer": "/repositories/32",
+      "repository": "AleReb/soil_PH_NPK",
+      "family": "F2",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 34,
+      "source_pointer": "/repositories/33",
+      "repository": "AleReb/Claseprocessing",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 35,
+      "source_pointer": "/repositories/34",
+      "repository": "AleReb/studio",
+      "family": "F8",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 36,
+      "source_pointer": "/repositories/35",
+      "repository": "AleReb/pruebagit",
+      "family": "F8",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 37,
+      "source_pointer": "/repositories/36",
+      "repository": "AleReb/firmwareBioDigestor",
+      "family": "F3",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 38,
+      "source_pointer": "/repositories/37",
+      "repository": "AleReb/fotoForward",
+      "family": "F5",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 39,
+      "source_pointer": "/repositories/38",
+      "repository": "AleReb/placamadre_envio_imagen_api",
+      "family": "F5",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 40,
+      "source_pointer": "/repositories/39",
+      "repository": "AleReb/uEXC",
+      "family": "F8",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 41,
+      "source_pointer": "/repositories/40",
+      "repository": "AleReb/ESP32_SD_Manager",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 42,
+      "source_pointer": "/repositories/41",
+      "repository": "AleReb/LineaBase",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 43,
+      "source_pointer": "/repositories/42",
+      "repository": "AleReb/AnalogReadSerial32",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "private"
+    },
+    {
+      "index_1based": 44,
+      "source_pointer": "/repositories/43",
+      "repository": "AleReb/esp32com",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 45,
+      "source_pointer": "/repositories/44",
+      "repository": "AleReb/BIODIJESTOR2v08_7_old",
+      "family": "F3",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 46,
+      "source_pointer": "/repositories/45",
+      "repository": "AleReb/DUST_SENSOR_SDS198",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 47,
+      "source_pointer": "/repositories/46",
+      "repository": "AleReb/HIRI_PR0_MENU_BASEV3.1",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 48,
+      "source_pointer": "/repositories/47",
+      "repository": "AleReb/ble_plantower_HIRI_sdPM10_v2.2",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 49,
+      "source_pointer": "/repositories/48",
+      "repository": "AleReb/kuscallaccp",
+      "family": "F2",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 50,
+      "source_pointer": "/repositories/49",
+      "repository": "AleReb/SERIAL_RPI_TEST",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 51,
+      "source_pointer": "/repositories/50",
+      "repository": "AleReb/foto-uart-dropin",
+      "family": "F5",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 52,
+      "source_pointer": "/repositories/51",
+      "repository": "AleReb/UV_WINCONTOP_RS485_CAMBIO_DE_ID",
+      "family": "F2",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 53,
+      "source_pointer": "/repositories/52",
+      "repository": "AleReb/SerialSjh",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 54,
+      "source_pointer": "/repositories/53",
+      "repository": "AleReb/PH_TEMP_RS485_WINCONTOP",
+      "family": "F2",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 55,
+      "source_pointer": "/repositories/54",
+      "repository": "AleReb/Intro-presentarv2",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 56,
+      "source_pointer": "/repositories/55",
+      "repository": "AleReb/HIRI_PR0_BASE_V0_0_1_SDWv2",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 57,
+      "source_pointer": "/repositories/56",
+      "repository": "AleReb/hiriccp",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 58,
+      "source_pointer": "/repositories/57",
+      "repository": "AleReb/vastago_0_02WLOCAL_LITTLEFS_ANALOG_calibrated",
+      "family": "F2",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 59,
+      "source_pointer": "/repositories/58",
+      "repository": "AleReb/HIRI_PR0_GPSDebug_sim7600_esp32V0_08_CMAS",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 60,
+      "source_pointer": "/repositories/59",
+      "repository": "AleReb/CameraWebServerLocalAP",
+      "family": "F5",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 61,
+      "source_pointer": "/repositories/60",
+      "repository": "AleReb/HIRI_PR0_GPSDebug_sim7600_esp32V0_08_CMAS_WIFI_ESTABLE",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 62,
+      "source_pointer": "/repositories/61",
+      "repository": "AleReb/ble_plantower_HIRI_v2",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 63,
+      "source_pointer": "/repositories/62",
+      "repository": "AleReb/actualizacion_rtc_celularSim7600",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 64,
+      "source_pointer": "/repositories/63",
+      "repository": "AleReb/cplus-base-info",
+      "family": "F6",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 65,
+      "source_pointer": "/repositories/64",
+      "repository": "AleReb/estacion-calidad-aire",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 66,
+      "source_pointer": "/repositories/65",
+      "repository": "AleReb/HiriAPP",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 67,
+      "source_pointer": "/repositories/66",
+      "repository": "AleReb/HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1",
+      "family": "F2",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 68,
+      "source_pointer": "/repositories/67",
+      "repository": "AleReb/yolotest",
+      "family": "F5",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 69,
+      "source_pointer": "/repositories/68",
+      "repository": "AleReb/dafruitio",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 70,
+      "source_pointer": "/repositories/69",
+      "repository": "AleReb/Yolov8-Object-Detection-on-Browser",
+      "family": "F5",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 71,
+      "source_pointer": "/repositories/70",
+      "repository": "AleReb/Quantum32",
+      "family": "F8",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 72,
+      "source_pointer": "/repositories/71",
+      "repository": "AleReb/MULTI_I2C_ADS1115X8",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 73,
+      "source_pointer": "/repositories/72",
+      "repository": "AleReb/trinket-lifeEsp32",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 74,
+      "source_pointer": "/repositories/73",
+      "repository": "AleReb/ESP32S3-USB-Keyboard-To-BLEtest",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 75,
+      "source_pointer": "/repositories/74",
+      "repository": "AleReb/esps3_4seerial_2i2c",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 76,
+      "source_pointer": "/repositories/75",
+      "repository": "AleReb/vocSerial_esp32",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 77,
+      "source_pointer": "/repositories/76",
+      "repository": "AleReb/LineaBaseModuloAIRE",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 78,
+      "source_pointer": "/repositories/77",
+      "repository": "AleReb/miniMadre",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 79,
+      "source_pointer": "/repositories/78",
+      "repository": "AleReb/HIRI_PR0_GPSDebug_sim7600_esp32V0_09_CMAS_WIFI_SDS198",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 80,
+      "source_pointer": "/repositories/79",
+      "repository": "AleReb/domo",
+      "family": "F8",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 81,
+      "source_pointer": "/repositories/80",
+      "repository": "AleReb/CWT-WLS-water-level-sensor-manual",
+      "family": "F2",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 82,
+      "source_pointer": "/repositories/81",
+      "repository": "AleReb/libraries",
+      "family": "F6",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 83,
+      "source_pointer": "/repositories/82",
+      "repository": "AleReb/BIODIJESTOR2v08_7",
+      "family": "F3",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 84,
+      "source_pointer": "/repositories/83",
+      "repository": "AleReb/cmas-mcp",
+      "family": "F6",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 85,
+      "source_pointer": "/repositories/84",
+      "repository": "AleReb/local-semantic-handoff",
+      "family": "F6",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 86,
+      "source_pointer": "/repositories/85",
+      "repository": "AleReb/FirmwarePro",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 87,
+      "source_pointer": "/repositories/86",
+      "repository": "AleReb/FirmwareProv2",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 88,
+      "source_pointer": "/repositories/87",
+      "repository": "AleReb/GuiaSensoresUDDservidor",
+      "family": "F6",
+      "classification": "inferencia_por_nombre",
+      "visibility": "private"
+    },
+    {
+      "index_1based": 89,
+      "source_pointer": "/repositories/88",
+      "repository": "AleReb/GuiaSensoresUDDservidorOPEN",
+      "family": "F6",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 90,
+      "source_pointer": "/repositories/89",
+      "repository": "AleReb/C-BibliotecaHardware",
+      "family": "F6",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 91,
+      "source_pointer": "/repositories/90",
+      "repository": "AleReb/PLACAMADRE_LINEA_BASE_V0_0_4_SENSORES_EXTERNOS",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 92,
+      "source_pointer": "/repositories/91",
+      "repository": "AleReb/SUELO_EC_T_HX2",
+      "family": "F2",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 93,
+      "source_pointer": "/repositories/92",
+      "repository": "AleReb/CuantumWiki",
+      "family": "F6",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 94,
+      "source_pointer": "/repositories/93",
+      "repository": "AleReb/CoyhaiquePCB",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 95,
+      "source_pointer": "/repositories/94",
+      "repository": "AleReb/clocRS3231_Deepsleep",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 96,
+      "source_pointer": "/repositories/95",
+      "repository": "AleReb/wifiEsp32Motor",
+      "family": "F5",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 97,
+      "source_pointer": "/repositories/96",
+      "repository": "AleReb/powerSistemC",
+      "family": "F4",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 98,
+      "source_pointer": "/repositories/97",
+      "repository": "AleReb/HIRI_PR0_FINAL_V01_ESTATIC_MINIMADRE",
+      "family": "F1",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 99,
+      "source_pointer": "/repositories/98",
+      "repository": "AleReb/desafio2ClasePwm",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    },
+    {
+      "index_1based": 100,
+      "source_pointer": "/repositories/99",
+      "repository": "AleReb/desafio2MODULOS",
+      "family": "F7",
+      "classification": "inferencia_por_nombre",
+      "visibility": "public"
+    }
+  ],
+  "verification": {
+    "input_records": 100,
+    "assigned_records": 100,
+    "unique_repositories": 100,
+    "readmes_requested": 5,
+    "readmes_received": 5,
+    "firmware_executed": false
+  }
+}

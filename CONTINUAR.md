@@ -9,17 +9,18 @@ Obtener una visión GENERAL del trabajo de Alejandro Rebolledo y proponer papers
 ## Avance guardado
 
 - Plan y backlog creados; inventarios iniciales: 100 entradas AleReb, 13 cmasudd, cobertura no exhaustiva confirmada.
-- Usuario autorizó ejecutar gpt-6.1-sol; dos agentes completaron fichas T01/T02. T01 revisada y aceptada documentalmente; T02 espera revisión del coordinador.
-- P01 (panorama AleReb) y P02 (panorama webs) fueron asignadas a agentes gpt-6.1-sol; sus archivos pueden llegar después de este checkpoint. Revisar existencia/estado real, no asumir que los procesos sobrevivirán a una nueva sesión.
-- El coordinador debe producir VISION_GENERAL.md y PROPUESTAS_PUBLICACIONES.md tras revisar los panoramas.
+- T01/T02: fichas de modularAirFlow y voluntariosxagua completadas con gpt-6.1-sol y aceptadas documentalmente tras revisión.
+- P01/P02: panoramas AleReb y webs cmasudd completados con gpt-6.1-sol, revisados; diez README representativos consultados por los agentes.
+- P03 completada: VISION_GENERAL.md y PROPUESTAS_PUBLICACIONES.md. Ocho familias personales, webs/plataformas y siete líneas editoriales. Prioridad exploratoria A (arquitectura de datos), B (evaluación de aire), C (datos ciudadanos).
+- Todos los agentes de esta tanda terminaron; no quedan agentes trabajando en segundo plano.
 
 ## Retomar en orden
 
-1. Leer AGENTS.md, README.md, este archivo, D001 y tareas/backlog.json; comprobar `git status` y commits recientes.
-2. Inspeccionar resultados/P01 y P02. Si faltan, relanzar solo el trabajo faltante con gpt-6.1-sol: panorama por familias y hasta cinco README representativos por agente; no auditoría profunda de cada repo.
-3. Revisar resultados/T02 y los panoramas: evidencia, inferencias, cobertura y contribuciones colectivas.
-4. Sintetizar visión transversal y lista corta priorizada de propuestas: pregunta, trabajo conectado, aporte potencial, evidencia disponible/faltante, tipo de publicación y siguiente paso.
-5. Actualizar estados y este checkpoint; guardar commit local.
+1. Leer AGENTS.md, README.md, este archivo, VISION_GENERAL.md, PROPUESTAS_PUBLICACIONES.md y tareas/backlog.json; comprobar git status y commits recientes.
+2. Continuar con V01–V03, descritas en resultados/P03/informe.md: informes/datos de aire, exportadores/contratos, procedencia de datos ciudadanos. Estado lista, todavía sin ejecutar.
+3. Lanzar tareas acotadas con gpt-6.1-sol si sigue disponible, registrar presupuesto orientativo y dueño; no rehacer los panoramas completos.
+4. Revisar entregas y elegir publicación principal/alternativa según evidencia recuperable. Después realizar búsqueda bibliográfica primaria y definir protocolo; todavía no redactar resultados como si existieran.
+5. Mantener actualizado este archivo y guardar un commit local antes de cerrar o acercarse al límite de trabajo. Los archivos, no los procesos, sostienen la continuidad.
 
 ## Límites y pendientes
 
@@ -27,4 +28,4 @@ LinkedIn exacto, acceso interno al servidor y significado/dispositivo de liberar
 
 ## Agentes de esta sesión
 
-/root/piloto_airflow: T01 terminada, luego P01 asignada; /root/piloto_agua: T02 terminada; /root/panorama_webs: P02 asignada. Modelo solicitado al lanzarlos: gpt-6.1-sol. IDs sirven solo como referencia de la sesión; los archivos son la continuidad durable. No hay daemon ni continuación automática configurada.
+/root/piloto_airflow: T01 y P01 terminadas; /root/piloto_agua: T02 terminada; /root/panorama_webs: P02 terminada. Modelo solicitado al lanzarlos: gpt-6.1-sol. IDs sirven solo como referencia de la sesión; los archivos son la continuidad durable. No hay daemon ni continuación automática configurada.

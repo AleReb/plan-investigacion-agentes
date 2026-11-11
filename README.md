@@ -8,7 +8,7 @@ Este repositorio contiene el plan y una exploración inicial, no una auditoría 
 
 ## Prioridad actual
 
-Por aclaración del usuario, la entrega principal será una visión general transversal y propuestas de papers/publicaciones. Ver `decisiones/D001-vision-general.md`. P01/P02/P03 preceden nuevas auditorías profundas; T01/T02 aportan evidencia inicial.
+Por aclaración del usuario, la entrega principal es [la visión general](VISION_GENERAL.md) y [las propuestas de papers/publicaciones](PROPUESTAS_PUBLICACIONES.md). Ver `decisiones/D001-vision-general.md`. P01/P02/P03 están completadas; T01/T02 aportan evidencia inicial. Para retomar: [CONTINUAR.md](CONTINUAR.md).
 
 ## Inicio
 
