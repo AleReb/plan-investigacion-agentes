@@ -1,0 +1,273 @@
+{
+  "version": 1,
+  "updated_at": "2026-11-11",
+  "execution": "manual por coordinador; no hay agentes básicos lanzados",
+  "tasks": [
+    {
+      "id": "T00",
+      "title": "Completar alcance y cobertura",
+      "role": "coordinador",
+      "depends_on": [],
+      "status": "lista",
+      "owner": null,
+      "output": "resultados/T00/",
+      "acceptance": [
+        "Leer revisión inicial e inventarios",
+        "Registrar fuentes, pendientes y presupuesto del piloto"
+      ],
+      "blocker": null,
+      "model": null,
+      "budget": null
+    },
+    {
+      "id": "T01",
+      "title": "Ficha documental modularAirFlow",
+      "role": "inventario_basico",
+      "depends_on": [
+        "T00"
+      ],
+      "status": "pendiente",
+      "owner": null,
+      "output": "resultados/T01/",
+      "acceptance": [
+        "Citar commit y README",
+        "Separar pruebas declaradas, código y arquitectura propuesta",
+        "Conservar prohibición de compilar/cargar"
+      ],
+      "blocker": null,
+      "model": null,
+      "budget": null
+    },
+    {
+      "id": "T02",
+      "title": "Ficha documental voluntariosxagua",
+      "role": "inventario_basico",
+      "depends_on": [
+        "T00"
+      ],
+      "status": "pendiente",
+      "owner": null,
+      "output": "resultados/T02/",
+      "acceptance": [
+        "Citar commit y fuentes",
+        "Relacionar versiones AleReb/cmasudd sin asumir equivalencia",
+        "Registrar datos y coordenadas pendientes"
+      ],
+      "blocker": null,
+      "model": null,
+      "budget": null
+    },
+    {
+      "id": "T03",
+      "title": "Completar inventario AleReb y cmasudd",
+      "role": "inventario_basico",
+      "depends_on": [
+        "T00"
+      ],
+      "status": "pendiente",
+      "owner": null,
+      "output": "resultados/T03/",
+      "acceptance": [
+        "Documentar cobertura y paginación",
+        "Fijar versiones y clasificar por evidencia",
+        "Localizar canónicos, forks y colaboradores"
+      ],
+      "blocker": null,
+      "model": null,
+      "budget": null
+    },
+    {
+      "id": "T04",
+      "title": "Auditar webs y mapa de despliegues",
+      "role": "webs",
+      "depends_on": [
+        "T03"
+      ],
+      "status": "pendiente",
+      "owner": null,
+      "output": "resultados/T04/",
+      "acceptance": [
+        "URL verificada por sitio",
+        "Mapear repo a despliegue con evidencia",
+        "Revisar flujos en navegador o declarar limitación"
+      ],
+      "blocker": null,
+      "model": null,
+      "budget": null
+    },
+    {
+      "id": "T05",
+      "title": "Documentar servidor sensores.cmasccp.cl",
+      "role": "servidor",
+      "depends_on": [
+        "T00"
+      ],
+      "status": "bloqueada",
+      "owner": null,
+      "output": "resultados/T05/",
+      "acceptance": [
+        "Acceso de lectura identificado",
+        "Diagrama dispositivo a visualización",
+        "Inventario de servicios sin secretos"
+      ],
+      "blocker": "Falta identificar acceso interno de lectura",
+      "model": null,
+      "budget": null
+    },
+    {
+      "id": "T06",
+      "title": "Documentar trayectoria LinkedIn y proyectos",
+      "role": "trayectoria",
+      "depends_on": [
+        "T00"
+      ],
+      "status": "bloqueada",
+      "owner": null,
+      "output": "resultados/T06/",
+      "acceptance": [
+        "URL o exportación exacta",
+        "Cronología y rol con fuente",
+        "Distinguir autoría declarada y documentada"
+      ],
+      "blocker": "Falta LinkedIn exacto o exportación",
+      "model": null,
+      "budget": null
+    },
+    {
+      "id": "T07",
+      "title": "Matriz de evidencias y candidatos",
+      "role": "investigacion",
+      "depends_on": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "status": "pendiente",
+      "owner": null,
+      "output": "resultados/T07/",
+      "acceptance": [
+        "Integrar T04–T06 cuando estén disponibles o explicitar ausencia",
+        "Puntuar candidatos con fuentes",
+        "Localizar datos e informes y registrar brechas"
+      ],
+      "blocker": null,
+      "model": null,
+      "budget": null
+    },
+    {
+      "id": "T08",
+      "title": "Literatura y selección de pregunta",
+      "role": "investigacion",
+      "depends_on": [
+        "T07"
+      ],
+      "status": "pendiente",
+      "owner": null,
+      "output": "resultados/T08/",
+      "acceptance": [
+        "Búsqueda reproducible y referencias primarias verificadas",
+        "Un candidato principal y uno alternativo",
+        "Contribución potencial comparada con literatura"
+      ],
+      "blocker": null,
+      "model": null,
+      "budget": null
+    },
+    {
+      "id": "T09",
+      "title": "Protocolo experimental o de evaluación",
+      "role": "investigacion",
+      "depends_on": [
+        "T08"
+      ],
+      "status": "pendiente",
+      "owner": null,
+      "output": "resultados/T09/",
+      "acceptance": [
+        "Baseline y métricas previos a resultados",
+        "Muestra justificada y manejo de incertidumbre",
+        "Revisión metodológica antes de ejecución"
+      ],
+      "blocker": null,
+      "model": null,
+      "budget": null
+    },
+    {
+      "id": "T10",
+      "title": "Inventario de dispositivo y paquete preliminar",
+      "role": "hardware",
+      "depends_on": [
+        "T01",
+        "T03"
+      ],
+      "status": "bloqueada",
+      "owner": null,
+      "output": "resultados/T10/",
+      "acceptance": [
+        "Confirmar significado de liberar y dispositivo",
+        "BOM CAD firmware licencias y brechas",
+        "Sin atribuir validación física inexistente"
+      ],
+      "blocker": "Falta definir dispositivo y significado de liberar",
+      "model": null,
+      "budget": null
+    },
+    {
+      "id": "T11",
+      "title": "Ejecutar validación autorizada y análisis",
+      "role": "datos",
+      "depends_on": [
+        "T09"
+      ],
+      "status": "pendiente",
+      "owner": null,
+      "output": "resultados/T11/",
+      "acceptance": [
+        "Acceso y ensayos concretos definidos",
+        "Datos y scripts versionados",
+        "Reproducción independiente y límites registrados"
+      ],
+      "blocker": null,
+      "model": null,
+      "budget": null
+    },
+    {
+      "id": "T12",
+      "title": "Manuscrito y paquete de publicación",
+      "role": "investigacion",
+      "depends_on": [
+        "T11"
+      ],
+      "status": "pendiente",
+      "owner": null,
+      "output": "resultados/T12/",
+      "acceptance": [
+        "Matriz de afirmaciones y referencias verificadas",
+        "Tablas y figuras reproducibles",
+        "Si hay hardware, integrar T10 y pruebas específicas antes de afirmar release validada"
+      ],
+      "blocker": null,
+      "model": null,
+      "budget": null
+    },
+    {
+      "id": "T13",
+      "title": "Revisión final editorial y técnica",
+      "role": "revisor",
+      "depends_on": [
+        "T12"
+      ],
+      "status": "pendiente",
+      "owner": null,
+      "output": "resultados/T13/",
+      "acceptance": [
+        "Revisión independiente completa",
+        "Permisos y contribuciones documentados",
+        "Paquete concreto preparado; publicación externa por separado"
+      ],
+      "blocker": null,
+      "model": null,
+      "budget": null
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# Datos locales y credenciales
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+__pycache__/
+.venv/
+privado/
+datos_crudos/
+*.sqlite
+*.sqlite3
+*.dump
+.DS_Store

@@ -1,0 +1,73 @@
+{
+  "observed_at": "2026-11-11",
+  "source": "https://github.com/cmasudd?tab=repositories",
+  "coverage": "Nombres enlazados en primera página HTML; paginación pendiente. Conector sin resultados; API pública limitada (403).",
+  "attribution": "Usuario declara haber creado las webs; documentar contribuciones específicas y colaboradores.",
+  "repositories": [
+    {
+      "repository": "cmasudd/HIRI232",
+      "url": "https://github.com/cmasudd/HIRI232",
+      "review_status": "enlace_observado"
+    },
+    {
+      "repository": "cmasudd/Propuesta_Licencia",
+      "url": "https://github.com/cmasudd/Propuesta_Licencia",
+      "review_status": "enlace_observado"
+    },
+    {
+      "repository": "cmasudd/SensorsWebApp",
+      "url": "https://github.com/cmasudd/SensorsWebApp",
+      "review_status": "enlace_observado"
+    },
+    {
+      "repository": "cmasudd/aireAysen",
+      "url": "https://github.com/cmasudd/aireAysen",
+      "review_status": "enlace_observado"
+    },
+    {
+      "repository": "cmasudd/aireaconcagua",
+      "url": "https://github.com/cmasudd/aireaconcagua",
+      "review_status": "enlace_observado"
+    },
+    {
+      "repository": "cmasudd/analizadorDeseccionCables",
+      "url": "https://github.com/cmasudd/analizadorDeseccionCables",
+      "review_status": "enlace_observado"
+    },
+    {
+      "repository": "cmasudd/auca-cochrane",
+      "url": "https://github.com/cmasudd/auca-cochrane",
+      "review_status": "enlace_observado"
+    },
+    {
+      "repository": "cmasudd/buenas_practicas",
+      "url": "https://github.com/cmasudd/buenas_practicas",
+      "review_status": "enlace_observado"
+    },
+    {
+      "repository": "cmasudd/calidadAgua",
+      "url": "https://github.com/cmasudd/calidadAgua",
+      "review_status": "enlace_observado"
+    },
+    {
+      "repository": "cmasudd/giz",
+      "url": "https://github.com/cmasudd/giz",
+      "review_status": "enlace_observado"
+    },
+    {
+      "repository": "cmasudd/monitor",
+      "url": "https://github.com/cmasudd/monitor",
+      "review_status": "enlace_observado"
+    },
+    {
+      "repository": "cmasudd/monitorHIRI",
+      "url": "https://github.com/cmasudd/monitorHIRI",
+      "review_status": "enlace_observado"
+    },
+    {
+      "repository": "cmasudd/voluntariosxagua",
+      "url": "https://github.com/cmasudd/voluntariosxagua",
+      "review_status": "enlace_observado"
+    }
+  ]
+}

@@ -1,0 +1,807 @@
+{
+  "observed_at": "2026-11-11",
+  "source": "GitHub conectado: list_repositories, owner AleReb, page_size 100; offset 100 sin resultados",
+  "coverage": "100 registros devueltos; validar cobertura contra perfil, organizaciones y repos locales antes de declarar inventario completo",
+  "repositories": [
+    {
+      "id": "385703393",
+      "repository": "AleReb/proyectokeika",
+      "url": "https://github.com/AleReb/proyectokeika",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "385709588",
+      "repository": "AleReb/keikap",
+      "url": "https://github.com/AleReb/keikap",
+      "visibility": "private",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "695981638",
+      "repository": "AleReb/midi5",
+      "url": "https://github.com/AleReb/midi5",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "724288803",
+      "repository": "AleReb/humedadsuelokuscalla",
+      "url": "https://github.com/AleReb/humedadsuelokuscalla",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "734347734",
+      "repository": "AleReb/roboticamaker",
+      "url": "https://github.com/AleReb/roboticamaker",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "788651706",
+      "repository": "AleReb/kuscalla-lorawan",
+      "url": "https://github.com/AleReb/kuscalla-lorawan",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "788660436",
+      "repository": "AleReb/HUMEDAD_DE_SUELO",
+      "url": "https://github.com/AleReb/HUMEDAD_DE_SUELO",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "788661964",
+      "repository": "AleReb/Suelo-con-TTGO-LoRa32-y-LoRaWAN",
+      "url": "https://github.com/AleReb/Suelo-con-TTGO-LoRa32-y-LoRaWAN",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "788670717",
+      "repository": "AleReb/Gesti-n-y-Monitoreo-Ambiental-con-ESP32",
+      "url": "https://github.com/AleReb/Gesti-n-y-Monitoreo-Ambiental-con-ESP32",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "788678404",
+      "repository": "AleReb/-Calidad-del-Aire-Avanzado",
+      "url": "https://github.com/AleReb/-Calidad-del-Aire-Avanzado",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "790378996",
+      "repository": "AleReb/Monitoreo-con-aceler-metro-GPS-y-GMS",
+      "url": "https://github.com/AleReb/Monitoreo-con-aceler-metro-GPS-y-GMS",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "790384388",
+      "repository": "AleReb/Monitoreo-y-Comunicaci-n-con-GSM-y-Display-OLED",
+      "url": "https://github.com/AleReb/Monitoreo-y-Comunicaci-n-con-GSM-y-Display-OLED",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "790388492",
+      "repository": "AleReb/Control-de-Salidas-Digitales-con-Adafruit-IO",
+      "url": "https://github.com/AleReb/Control-de-Salidas-Digitales-con-Adafruit-IO",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "790390729",
+      "repository": "AleReb/Medidor-de-Corriente-con-Adafruit-ADS1015",
+      "url": "https://github.com/AleReb/Medidor-de-Corriente-con-Adafruit-ADS1015",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "790392736",
+      "repository": "AleReb/Pod-metro-y-Monitor-de-Posici-n-con-ADXL345",
+      "url": "https://github.com/AleReb/Pod-metro-y-Monitor-de-Posici-n-con-ADXL345",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "790396041",
+      "repository": "AleReb/Arduino-con-Visualizaci-n-LCD-y-Sensores",
+      "url": "https://github.com/AleReb/Arduino-con-Visualizaci-n-LCD-y-Sensores",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "790400055",
+      "repository": "AleReb/Monitor-de-Aceleraci-n-en-Tres-Ejes-con-Display-LCD",
+      "url": "https://github.com/AleReb/Monitor-de-Aceleraci-n-en-Tres-Ejes-con-Display-LCD",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "790405351",
+      "repository": "AleReb/Control-de-Rat-n-con-Arduino-Leonardo-y-MPU6050",
+      "url": "https://github.com/AleReb/Control-de-Rat-n-con-Arduino-Leonardo-y-MPU6050",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "790406511",
+      "repository": "AleReb/Monitorizaci-n-de-Energ-a-con-ESP32-e-INA219-via-MQTT",
+      "url": "https://github.com/AleReb/Monitorizaci-n-de-Energ-a-con-ESP32-e-INA219-via-MQTT",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "792452471",
+      "repository": "AleReb/Comunicaci-n-LoRa-con-Arduino-MKR-1300",
+      "url": "https://github.com/AleReb/Comunicaci-n-LoRa-con-Arduino-MKR-1300",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "792454027",
+      "repository": "AleReb/Comunicaci-n-LoRa-con-Arduino-MKR-1300-y-Visualizaci-n-OLED",
+      "url": "https://github.com/AleReb/Comunicaci-n-LoRa-con-Arduino-MKR-1300-y-Visualizaci-n-OLED",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "792455650",
+      "repository": "AleReb/-Comunicaci-n-LoRa-con-Arduino-MKR-1300-Visualizaci-n-OLED-y-Registro-en-SD",
+      "url": "https://github.com/AleReb/-Comunicaci-n-LoRa-con-Arduino-MKR-1300-Visualizaci-n-OLED-y-Registro-en-SD",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "797339313",
+      "repository": "AleReb/Sensor-de-PH",
+      "url": "https://github.com/AleReb/Sensor-de-PH",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "809702100",
+      "repository": "AleReb/SDUPDATER",
+      "url": "https://github.com/AleReb/SDUPDATER",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "828004556",
+      "repository": "AleReb/ejemploUI",
+      "url": "https://github.com/AleReb/ejemploUI",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "840047675",
+      "repository": "AleReb/mps25plantower",
+      "url": "https://github.com/AleReb/mps25plantower",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "840054564",
+      "repository": "AleReb/ADS1256testspeed",
+      "url": "https://github.com/AleReb/ADS1256testspeed",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "847769686",
+      "repository": "AleReb/coyhaique",
+      "url": "https://github.com/AleReb/coyhaique",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "886944409",
+      "repository": "AleReb/balanzaRPI",
+      "url": "https://github.com/AleReb/balanzaRPI",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "901574783",
+      "repository": "AleReb/HIRI",
+      "url": "https://github.com/AleReb/HIRI",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "948707828",
+      "repository": "AleReb/democarwifi",
+      "url": "https://github.com/AleReb/democarwifi",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "948707999",
+      "repository": "AleReb/democamaracar",
+      "url": "https://github.com/AleReb/democamaracar",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "974371267",
+      "repository": "AleReb/soil_PH_NPK",
+      "url": "https://github.com/AleReb/soil_PH_NPK",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "978213153",
+      "repository": "AleReb/Claseprocessing",
+      "url": "https://github.com/AleReb/Claseprocessing",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "979443341",
+      "repository": "AleReb/studio",
+      "url": "https://github.com/AleReb/studio",
+      "visibility": "public",
+      "default_branch": "master",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "992067629",
+      "repository": "AleReb/pruebagit",
+      "url": "https://github.com/AleReb/pruebagit",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1001552948",
+      "repository": "AleReb/firmwareBioDigestor",
+      "url": "https://github.com/AleReb/firmwareBioDigestor",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1004504651",
+      "repository": "AleReb/fotoForward",
+      "url": "https://github.com/AleReb/fotoForward",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1004590448",
+      "repository": "AleReb/placamadre_envio_imagen_api",
+      "url": "https://github.com/AleReb/placamadre_envio_imagen_api",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1007359532",
+      "repository": "AleReb/uEXC",
+      "url": "https://github.com/AleReb/uEXC",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1008716067",
+      "repository": "AleReb/ESP32_SD_Manager",
+      "url": "https://github.com/AleReb/ESP32_SD_Manager",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1011432016",
+      "repository": "AleReb/LineaBase",
+      "url": "https://github.com/AleReb/LineaBase",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1042316049",
+      "repository": "AleReb/AnalogReadSerial32",
+      "url": "https://github.com/AleReb/AnalogReadSerial32",
+      "visibility": "private",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1042829156",
+      "repository": "AleReb/esp32com",
+      "url": "https://github.com/AleReb/esp32com",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1042942152",
+      "repository": "AleReb/BIODIJESTOR2v08_7_old",
+      "url": "https://github.com/AleReb/BIODIJESTOR2v08_7_old",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1044547293",
+      "repository": "AleReb/DUST_SENSOR_SDS198",
+      "url": "https://github.com/AleReb/DUST_SENSOR_SDS198",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1045718258",
+      "repository": "AleReb/HIRI_PR0_MENU_BASEV3.1",
+      "url": "https://github.com/AleReb/HIRI_PR0_MENU_BASEV3.1",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1045734167",
+      "repository": "AleReb/ble_plantower_HIRI_sdPM10_v2.2",
+      "url": "https://github.com/AleReb/ble_plantower_HIRI_sdPM10_v2.2",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1048648073",
+      "repository": "AleReb/kuscallaccp",
+      "url": "https://github.com/AleReb/kuscallaccp",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1048682459",
+      "repository": "AleReb/SERIAL_RPI_TEST",
+      "url": "https://github.com/AleReb/SERIAL_RPI_TEST",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1049090423",
+      "repository": "AleReb/foto-uart-dropin",
+      "url": "https://github.com/AleReb/foto-uart-dropin",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1050026476",
+      "repository": "AleReb/UV_WINCONTOP_RS485_CAMBIO_DE_ID",
+      "url": "https://github.com/AleReb/UV_WINCONTOP_RS485_CAMBIO_DE_ID",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1051287554",
+      "repository": "AleReb/SerialSjh",
+      "url": "https://github.com/AleReb/SerialSjh",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1052906017",
+      "repository": "AleReb/PH_TEMP_RS485_WINCONTOP",
+      "url": "https://github.com/AleReb/PH_TEMP_RS485_WINCONTOP",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1055184658",
+      "repository": "AleReb/Intro-presentarv2",
+      "url": "https://github.com/AleReb/Intro-presentarv2",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1055302035",
+      "repository": "AleReb/HIRI_PR0_BASE_V0_0_1_SDWv2",
+      "url": "https://github.com/AleReb/HIRI_PR0_BASE_V0_0_1_SDWv2",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1059161882",
+      "repository": "AleReb/hiriccp",
+      "url": "https://github.com/AleReb/hiriccp",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1066590915",
+      "repository": "AleReb/vastago_0_02WLOCAL_LITTLEFS_ANALOG_calibrated",
+      "url": "https://github.com/AleReb/vastago_0_02WLOCAL_LITTLEFS_ANALOG_calibrated",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1069150580",
+      "repository": "AleReb/HIRI_PR0_GPSDebug_sim7600_esp32V0_08_CMAS",
+      "url": "https://github.com/AleReb/HIRI_PR0_GPSDebug_sim7600_esp32V0_08_CMAS",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1073206997",
+      "repository": "AleReb/CameraWebServerLocalAP",
+      "url": "https://github.com/AleReb/CameraWebServerLocalAP",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1075019963",
+      "repository": "AleReb/HIRI_PR0_GPSDebug_sim7600_esp32V0_08_CMAS_WIFI_ESTABLE",
+      "url": "https://github.com/AleReb/HIRI_PR0_GPSDebug_sim7600_esp32V0_08_CMAS_WIFI_ESTABLE",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1077101218",
+      "repository": "AleReb/ble_plantower_HIRI_v2",
+      "url": "https://github.com/AleReb/ble_plantower_HIRI_v2",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1089020138",
+      "repository": "AleReb/actualizacion_rtc_celularSim7600",
+      "url": "https://github.com/AleReb/actualizacion_rtc_celularSim7600",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1092307701",
+      "repository": "AleReb/cplus-base-info",
+      "url": "https://github.com/AleReb/cplus-base-info",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1095707184",
+      "repository": "AleReb/estacion-calidad-aire",
+      "url": "https://github.com/AleReb/estacion-calidad-aire",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1096676418",
+      "repository": "AleReb/HiriAPP",
+      "url": "https://github.com/AleReb/HiriAPP",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1103153249",
+      "repository": "AleReb/HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1",
+      "url": "https://github.com/AleReb/HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1104078619",
+      "repository": "AleReb/yolotest",
+      "url": "https://github.com/AleReb/yolotest",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1104143715",
+      "repository": "AleReb/dafruitio",
+      "url": "https://github.com/AleReb/dafruitio",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1104726149",
+      "repository": "AleReb/Yolov8-Object-Detection-on-Browser",
+      "url": "https://github.com/AleReb/Yolov8-Object-Detection-on-Browser",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1107943840",
+      "repository": "AleReb/Quantum32",
+      "url": "https://github.com/AleReb/Quantum32",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1111387447",
+      "repository": "AleReb/MULTI_I2C_ADS1115X8",
+      "url": "https://github.com/AleReb/MULTI_I2C_ADS1115X8",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1119649740",
+      "repository": "AleReb/trinket-lifeEsp32",
+      "url": "https://github.com/AleReb/trinket-lifeEsp32",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1129338847",
+      "repository": "AleReb/ESP32S3-USB-Keyboard-To-BLEtest",
+      "url": "https://github.com/AleReb/ESP32S3-USB-Keyboard-To-BLEtest",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1131410624",
+      "repository": "AleReb/esps3_4seerial_2i2c",
+      "url": "https://github.com/AleReb/esps3_4seerial_2i2c",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1134572815",
+      "repository": "AleReb/vocSerial_esp32",
+      "url": "https://github.com/AleReb/vocSerial_esp32",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1134589868",
+      "repository": "AleReb/LineaBaseModuloAIRE",
+      "url": "https://github.com/AleReb/LineaBaseModuloAIRE",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1137114075",
+      "repository": "AleReb/miniMadre",
+      "url": "https://github.com/AleReb/miniMadre",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1137697153",
+      "repository": "AleReb/HIRI_PR0_GPSDebug_sim7600_esp32V0_09_CMAS_WIFI_SDS198",
+      "url": "https://github.com/AleReb/HIRI_PR0_GPSDebug_sim7600_esp32V0_09_CMAS_WIFI_SDS198",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1137796003",
+      "repository": "AleReb/domo",
+      "url": "https://github.com/AleReb/domo",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1144279335",
+      "repository": "AleReb/CWT-WLS-water-level-sensor-manual",
+      "url": "https://github.com/AleReb/CWT-WLS-water-level-sensor-manual",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1145258957",
+      "repository": "AleReb/libraries",
+      "url": "https://github.com/AleReb/libraries",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1156392381",
+      "repository": "AleReb/BIODIJESTOR2v08_7",
+      "url": "https://github.com/AleReb/BIODIJESTOR2v08_7",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1156444319",
+      "repository": "AleReb/cmas-mcp",
+      "url": "https://github.com/AleReb/cmas-mcp",
+      "visibility": "public",
+      "default_branch": "master",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1156778533",
+      "repository": "AleReb/local-semantic-handoff",
+      "url": "https://github.com/AleReb/local-semantic-handoff",
+      "visibility": "public",
+      "default_branch": "master",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1157172395",
+      "repository": "AleReb/FirmwarePro",
+      "url": "https://github.com/AleReb/FirmwarePro",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1157511230",
+      "repository": "AleReb/FirmwareProv2",
+      "url": "https://github.com/AleReb/FirmwareProv2",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1162862318",
+      "repository": "AleReb/GuiaSensoresUDDservidor",
+      "url": "https://github.com/AleReb/GuiaSensoresUDDservidor",
+      "visibility": "private",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1162877545",
+      "repository": "AleReb/GuiaSensoresUDDservidorOPEN",
+      "url": "https://github.com/AleReb/GuiaSensoresUDDservidorOPEN",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1164839229",
+      "repository": "AleReb/C-BibliotecaHardware",
+      "url": "https://github.com/AleReb/C-BibliotecaHardware",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1164875752",
+      "repository": "AleReb/PLACAMADRE_LINEA_BASE_V0_0_4_SENSORES_EXTERNOS",
+      "url": "https://github.com/AleReb/PLACAMADRE_LINEA_BASE_V0_0_4_SENSORES_EXTERNOS",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1165145671",
+      "repository": "AleReb/SUELO_EC_T_HX2",
+      "url": "https://github.com/AleReb/SUELO_EC_T_HX2",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1165738675",
+      "repository": "AleReb/CuantumWiki",
+      "url": "https://github.com/AleReb/CuantumWiki",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1173014886",
+      "repository": "AleReb/CoyhaiquePCB",
+      "url": "https://github.com/AleReb/CoyhaiquePCB",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1176281336",
+      "repository": "AleReb/clocRS3231_Deepsleep",
+      "url": "https://github.com/AleReb/clocRS3231_Deepsleep",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1190867964",
+      "repository": "AleReb/wifiEsp32Motor",
+      "url": "https://github.com/AleReb/wifiEsp32Motor",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1196532153",
+      "repository": "AleReb/powerSistemC",
+      "url": "https://github.com/AleReb/powerSistemC",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1198784422",
+      "repository": "AleReb/HIRI_PR0_FINAL_V01_ESTATIC_MINIMADRE",
+      "url": "https://github.com/AleReb/HIRI_PR0_FINAL_V01_ESTATIC_MINIMADRE",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1202285152",
+      "repository": "AleReb/desafio2ClasePwm",
+      "url": "https://github.com/AleReb/desafio2ClasePwm",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    },
+    {
+      "id": "1202370623",
+      "repository": "AleReb/desafio2MODULOS",
+      "url": "https://github.com/AleReb/desafio2MODULOS",
+      "visibility": "public",
+      "default_branch": "main",
+      "review_status": "solo_metadatos"
+    }
+  ]
+}
