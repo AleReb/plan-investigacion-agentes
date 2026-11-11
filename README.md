@@ -6,6 +6,10 @@ Objetivo: revisar GitHub, servidor, webs y trayectoria profesional; reconstruir 
 
 Este repositorio contiene el plan y una exploración inicial, no una auditoría completa ni resultados científicos. La ejecución se organiza por tareas pequeñas para agentes básicos, con revisión científica y decisiones de arquitectura a cargo de un coordinador de mayor capacidad.
 
+## Prioridad actual
+
+Por aclaración del usuario, la entrega principal será una visión general transversal y propuestas de papers/publicaciones. Ver `decisiones/D001-vision-general.md`. P01/P02/P03 preceden nuevas auditorías profundas; T01/T02 aportan evidencia inicial.
+
 ## Inicio
 
 1. Leer `AGENTS.md`, `docs/01-revision-inicial.md` y `docs/02-plan.md`.
@@ -32,4 +36,4 @@ Este repositorio contiene el plan y una exploración inicial, no una auditoría 
 
 La planificación de “liberar” hardware usa provisionalmente el sentido de publicar diseños y firmware reproducibles. Si significa desbloquear un equipo existente, definir modelo, objetivo y acceso antes de desarrollar esa rama. No presupone que el destino sea la revista HardwareX; esa opción se evaluará después de confirmar alcance y requisitos editoriales vigentes.
 
-Repositorio local: `/home/ale/Documents/repos/plan-investigacion-agentes`. No contiene un lanzador automático ni presupone modelos instalados. Las tareas quedan preparadas para ejecución posterior con la capacidad disponible.
+Repositorio local: `/home/ale/Documents/repos/plan-investigacion-agentes`. No contiene un lanzador automático ni presupone modelos instalados. El piloto T01/T02 se inició con dos agentes `gpt-6.1-sol`; consultar estados en `tareas/backlog.json`.

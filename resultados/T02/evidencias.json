@@ -1,0 +1,179 @@
+[
+  {
+    "id": "T02-E01",
+    "claim": "HEAD y origen AleReb observados; árbol limpio antes/después y metadato autor AleReb.",
+    "classification": "observado directamente",
+    "source": "/home/ale/Documents/repos/voluntariosxagua",
+    "locator": "git rev-parse HEAD; git remote -v; git status --porcelain=v1; git log -1 --format=fuller",
+    "version_or_sha256": {
+      "source_commit": "2e08e016df32e8f8b765af5f20abdde0308c0b13"
+    },
+    "observed_at": "2026-11-11",
+    "method": "Lectura local de solo lectura: Git, texto numerado o Python estándar zipfile/ElementTree/json; sin ejecutar código del proyecto.",
+    "limitations": "No comparación remota. Autor de commit no implica autoría exclusiva.",
+    "visibility": "local_no_publicar_sin_revision"
+  },
+  {
+    "id": "T02-E02",
+    "claim": "Propósito, operación mensual y advertencias de datos/coordenadas e instrumentos.",
+    "classification": "declarado por documentación",
+    "source": "/home/ale/Documents/repos/voluntariosxagua/README.md",
+    "locator": "líneas 5–19,86–115,117–146,148–173",
+    "version_or_sha256": {
+      "source_commit": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+      "sha256": "975f4677f1141a3f04e5e53426218fdd81a4eb6e8bb34e35585f2e61df05dcb6"
+    },
+    "observed_at": "2026-11-11",
+    "method": "Lectura local de solo lectura: Git, texto numerado o Python estándar zipfile/ElementTree/json; sin ejecutar código del proyecto.",
+    "limitations": "No se reprodujo funcionamiento, calibración ni publicación.",
+    "visibility": "local_no_publicar_sin_revision"
+  },
+  {
+    "id": "T02-E03",
+    "claim": "Conversor XLSX/fotos, siete estaciones, coordenadas por sector y etiquetas de unidades.",
+    "classification": "observado directamente",
+    "source": "/home/ale/Documents/repos/voluntariosxagua/scripts/build_site_data.py",
+    "locator": "líneas 13–58,97–163,166–216",
+    "version_or_sha256": {
+      "source_commit": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+      "sha256": "7d03fb581666621b114931459ef370d5634c20a2157df3ec88d96c541dbd0441"
+    },
+    "observed_at": "2026-11-11",
+    "method": "Lectura local de solo lectura: Git, texto numerado o Python estándar zipfile/ElementTree/json; sin ejecutar código del proyecto.",
+    "limitations": "Código leído, no ejecutado; coordenadas no validadas.",
+    "visibility": "local_no_publicar_sin_revision"
+  },
+  {
+    "id": "T02-E04",
+    "claim": "Workflow configura construcción y despliegue de docs vía Pages.",
+    "classification": "observado directamente",
+    "source": "/home/ale/Documents/repos/voluntariosxagua/.github/workflows/pages.yml",
+    "locator": "líneas 3–44",
+    "version_or_sha256": {
+      "source_commit": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+      "sha256": "2037ba4aece1a6c9659df037442b7e979e9d74d2ff630305184010b528dd062b"
+    },
+    "observed_at": "2026-11-11",
+    "method": "Lectura local de solo lectura: Git, texto numerado o Python estándar zipfile/ElementTree/json; sin ejecutar código del proyecto.",
+    "limitations": "No se ejecutó Actions ni verificó despliegue.",
+    "visibility": "local_no_publicar_sin_revision"
+  },
+  {
+    "id": "T02-E05",
+    "claim": "App implementa series, resúmenes, mapa agrupado por sector y descarga.",
+    "classification": "observado directamente",
+    "source": "/home/ale/Documents/repos/voluntariosxagua/docs/app.js",
+    "locator": "líneas 20–37,68–140,143–210,245–273,287–308",
+    "version_or_sha256": {
+      "source_commit": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+      "sha256": "1e02520cde98d81b8fa6096d04e70e4c725e58eac8f65b6342304bd0e3f17d5c"
+    },
+    "observed_at": "2026-11-11",
+    "method": "Lectura local de solo lectura: Git, texto numerado o Python estándar zipfile/ElementTree/json; sin ejecutar código del proyecto.",
+    "limitations": "Lectura de código sin navegador ni prueba funcional.",
+    "visibility": "local_no_publicar_sin_revision"
+  },
+  {
+    "id": "T02-E06",
+    "claim": "XLSX con siete hojas y encabezados de fecha más nueve parámetros; alcalinidad sin unidad.",
+    "classification": "observado directamente",
+    "source": "/home/ale/Documents/repos/voluntariosxagua/abril2022anov2026_VPA.xlsx",
+    "locator": "ZIP xl/workbook.xml:main:sheets/main:sheet @name; xl/worksheets/sheet1.xml a sheet7.xml filas 1–2 A:J; xl/sharedStrings.xml",
+    "version_or_sha256": {
+      "source_commit": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+      "sha256": "4fe06c1d6426060563108cb07092ed1d90b22bc6c72dc6aa7f2b887d2edaf108"
+    },
+    "observed_at": "2026-11-11",
+    "method": "Lectura local de solo lectura: Git, texto numerado o Python estándar zipfile/ElementTree/json; sin ejecutar código del proyecto.",
+    "limitations": "Lectura solo de estructura/encabezados; sin auditoría de valores. sheetId no equivale a sheetN.xml.",
+    "visibility": "local_no_publicar_sin_revision"
+  },
+  {
+    "id": "T02-E07",
+    "claim": "JSON existente: 7 estaciones, 9 parámetros, 394 registros, rangos 2022-04-03 a 2026-11-01; nulos; Manzano/Colorado tiene 59 registros y 56 fechas. Índice docs/data/photos.json: 196 entradas; ambos ignorados (.gitignore:1–6 y git ls-files docs/data site/data sin salida).",
+    "classification": "observado directamente",
+    "source": "/home/ale/Documents/repos/voluntariosxagua/docs/data/measurements.json",
+    "locator": "$.stations; $.parameters; $.records[*].stationId/date/values; agrupación por stationId, set de fechas",
+    "version_or_sha256": {
+      "source_commit": null,
+      "sha256": "8d9232b3d764c7a0194a5197989c6c41400ab37a45560cd54bb4fa96f8753de9",
+      "photos_sha256": "43d94743a4424ff2cf9bd4e278cbc487ccecc8bcf63f35b123126ec071519c5d",
+      "gitignore_sha256": "276520214a0d67c564c08d168fb690fe7fade52b771ea7e32b16c980fd79cd97"
+    },
+    "observed_at": "2026-11-11",
+    "method": "Lectura local de solo lectura: Git, texto numerado o Python estándar zipfile/ElementTree/json; sin ejecutar código del proyecto.",
+    "limitations": "Ignorado por Git, no atribuir al commit. No regenerado ni comparado con XLSX; repetición puede ser réplica o error.",
+    "visibility": "local_no_publicar_sin_revision"
+  },
+  {
+    "id": "T02-E08",
+    "claim": "DOCX distingue coordenadas de puntos y de encuentro; coordenadas repetidas y textos ambiguos.",
+    "classification": "observado directamente",
+    "source": "/home/ale/Documents/repos/voluntariosxagua/Sitio web Voluntarios por el Agua2026.docx",
+    "locator": "ZIP word/document.xml, todos los w:p en orden, ordinal desde 1, párrafos 44–55 y 82–86; texto itertext()",
+    "version_or_sha256": {
+      "source_commit": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+      "sha256": "c7945f409e1e758bc6215b1357390fab9d15f84258b9ad8d3fa6f42d7e5dc6ef"
+    },
+    "observed_at": "2026-11-11",
+    "method": "Lectura local de solo lectura: Git, texto numerado o Python estándar zipfile/ElementTree/json; sin ejecutar código del proyecto.",
+    "limitations": "Sin interpretación geodésica. Índices XML no son páginas. No se copiaron datos personales.",
+    "visibility": "local_no_publicar_sin_revision"
+  },
+  {
+    "id": "T02-E09",
+    "claim": "Inventario enlaza cmasudd/voluntariosxagua y registra declaración de creación de webs por usuario.",
+    "classification": "declarado por documentación y usuario",
+    "source": "/home/ale/Documents/repos/plan-investigacion-agentes/inventario/cmasudd.json",
+    "locator": "$.repositories[repository=cmasudd/voluntariosxagua], líneas 67–70; $.attribution; revisión inicial E010, fecha 2026-11-11",
+    "version_or_sha256": {
+      "sha256": "246a032fb3f93a18e5a9b6a802eaf61008bb4200324bf4a4e9382da572ff0d5e",
+      "revision_inicial_sha256": "aee72df8f47c8279390bef9fd8470c9161de4a007148dbe4039119cfa669d3e5"
+    },
+    "observed_at": "2026-11-11",
+    "method": "Lectura local de solo lectura: Git, texto numerado o Python estándar zipfile/ElementTree/json; sin ejecutar código del proyecto.",
+    "limitations": "No observación remota nueva; canónico, historias y contribuciones pendientes.",
+    "visibility": "local_no_publicar_sin_revision"
+  },
+  {
+    "id": "T02-E10",
+    "claim": "Entradas de alcance, plantillas y T00 aceptada leídas.",
+    "classification": "observado directamente",
+    "source": "/home/ale/Documents/repos/plan-investigacion-agentes",
+    "locator": "AGENTS.md; README.md; docs/01-revision-inicial.md; docs/02-plan.md; prompts/ejecutor.md; plantillas; inventarios; resultados/T00/informe.md; tareas/backlog.json T00/T02",
+    "version_or_sha256": {
+      "sha256": {
+        "AGENTS.md": "1f1e97b1122a65477c95a3e6f726b0f1a6b6aefc6c7b93e19febc3adf45ba197",
+        "README.md": "da8ac46bb037f28ac2280ad54866a652c2752bb39a887c5b974b35cdca617895",
+        "docs/01-revision-inicial.md": "aee72df8f47c8279390bef9fd8470c9161de4a007148dbe4039119cfa669d3e5",
+        "docs/02-plan.md": "e9818172a1c297c74a789205a5f3f1f08c4f86d27c90090689c409990049dc21",
+        "prompts/ejecutor.md": "bd29b729a8d972799aa6ff1d99c17a1d23e5a5d4211fcc6ac10d5dd4d365cda1",
+        "plantillas/entrega.md": "39cf28634a3e1391003f2278c71ac917caa33f4310ec99c73d61761bf34eaf4e",
+        "plantillas/proyecto.md": "c669b00e41ddd3e1a57ff88dc6226772368f2c44c0b77a4a8b16f5fe29a9141f",
+        "plantillas/evidencia.json": "875e5170790be52580c00e4f4978dabaaf36e705d28209cccc856188d336adc6",
+        "inventario/github.json": "fe5ee2d48fb3c0d3df9d8717cb24826d0c3d8c0db1fb82285bb06565816d2e92",
+        "inventario/cmasudd.json": "246a032fb3f93a18e5a9b6a802eaf61008bb4200324bf4a4e9382da572ff0d5e",
+        "resultados/T00/informe.md": "8bd552b55f9d08b55a1d0441a1107e7dc110f8f225dc72fa36710772ddf565fa",
+        "tareas/backlog.json": "20911d669646491838c1afda409e9fb808c0269ea246705f7359c08b0734954b"
+      }
+    },
+    "observed_at": "2026-11-11",
+    "method": "Lectura local de solo lectura: Git, texto numerado o Python estándar zipfile/ElementTree/json; sin ejecutar código del proyecto.",
+    "limitations": "Inventario AleReb: metadatos y prefijo inspeccionados, no reauditoría de cobertura. Plan compartido.",
+    "visibility": "local_no_publicar_sin_revision"
+  },
+  {
+    "id": "T02-E11",
+    "claim": "No archivos rastreados por nombres LICENSE/COPYING; README solicita crédito y menciona UNESCO.",
+    "classification": "observado directamente",
+    "source": "/home/ale/Documents/repos/voluntariosxagua",
+    "locator": "git ls-files con patrones *LICENSE* y *COPYING*; README.md:117–129",
+    "version_or_sha256": {
+      "source_commit": "2e08e016df32e8f8b765af5f20abdde0308c0b13"
+    },
+    "observed_at": "2026-11-11",
+    "method": "Lectura local de solo lectura: Git, texto numerado o Python estándar zipfile/ElementTree/json; sin ejecutar código del proyecto.",
+    "limitations": "No auditoría legal exhaustiva; licencias por artefacto pendientes.",
+    "visibility": "local_no_publicar_sin_revision"
+  }
+]

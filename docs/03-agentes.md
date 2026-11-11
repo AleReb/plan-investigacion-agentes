@@ -12,7 +12,7 @@
 | Hardware | Básica para documentación; mayor para revisión técnica | BOM, CAD, firmware, montaje, compatibilidad y brechas | Validación física sin pruebas |
 | Revisor | Independiente del ejecutor | Contrastar entrega con fuentes y criterios | Aceptación por fluidez del texto |
 
-“Básica” es una clase de capacidad, no un modelo fijado. El coordinador debe registrar proveedor, ID exacto, versión/fecha y límites antes de ejecutar. No se ha instalado ni lanzado un modelo alternativo en esta preparación.
+“Básica” es una clase de capacidad, no un modelo fijado. El coordinador debe registrar proveedor, ID exacto, versión/fecha y límites antes de ejecutar. El 2026-11-11 se lanzaron dos agentes con el alias `gpt-6.1-sol` mediante colaboración para T01 y T02. Snapshot y consumo no expuestos por la herramienta; presupuesto orientativo registrado en T00.
 
 ## Piloto antes de escalar
 

@@ -1,15 +1,15 @@
 {
   "version": 1,
   "updated_at": "2026-11-11",
-  "execution": "manual por coordinador; no hay agentes básicos lanzados",
+  "execution": "Piloto y panorama con gpt-6.1-sol; prioridad P01/P02/P03 según D001",
   "tasks": [
     {
       "id": "T00",
       "title": "Completar alcance y cobertura",
       "role": "coordinador",
       "depends_on": [],
-      "status": "lista",
-      "owner": null,
+      "status": "aceptada",
+      "owner": "coordinador",
       "output": "resultados/T00/",
       "acceptance": [
         "Leer revisión inicial e inventarios",
@@ -26,8 +26,8 @@
       "depends_on": [
         "T00"
       ],
-      "status": "pendiente",
-      "owner": null,
+      "status": "aceptada",
+      "owner": "/root/piloto_airflow",
       "output": "resultados/T01/",
       "acceptance": [
         "Citar commit y README",
@@ -35,8 +35,13 @@
         "Conservar prohibición de compilar/cargar"
       ],
       "blocker": null,
-      "model": null,
-      "budget": null
+      "model": "gpt-6.1-sol",
+      "budget": {
+        "tokens_orientativos": 8000,
+        "minutos": 30,
+        "intentos_maximos": 2,
+        "limite_duro": false
+      }
     },
     {
       "id": "T02",
@@ -45,8 +50,8 @@
       "depends_on": [
         "T00"
       ],
-      "status": "pendiente",
-      "owner": null,
+      "status": "en_curso",
+      "owner": "/root/piloto_agua",
       "output": "resultados/T02/",
       "acceptance": [
         "Citar commit y fuentes",
@@ -54,8 +59,13 @@
         "Registrar datos y coordenadas pendientes"
       ],
       "blocker": null,
-      "model": null,
-      "budget": null
+      "model": "gpt-6.1-sol",
+      "budget": {
+        "tokens_orientativos": 8000,
+        "minutos": 30,
+        "intentos_maximos": 2,
+        "limite_duro": false
+      }
     },
     {
       "id": "T03",
@@ -268,6 +278,73 @@
       "blocker": null,
       "model": null,
       "budget": null
+    },
+    {
+      "id": "P01",
+      "title": "Panorama transversal AleReb",
+      "role": "inventario_basico",
+      "depends_on": [
+        "T00"
+      ],
+      "status": "en_curso",
+      "owner": "/root/piloto_airflow",
+      "output": "resultados/P01/",
+      "acceptance": [
+        "Cobertura y límites explícitos",
+        "Conectar proyectos en líneas de trabajo",
+        "Propuestas con evidencia existente y faltante, sin afirmar novedad"
+      ],
+      "blocker": null,
+      "model": "gpt-6.1-sol",
+      "budget": {
+        "tokens_orientativos": 8000,
+        "limite_duro": false
+      }
+    },
+    {
+      "id": "P02",
+      "title": "Panorama webs y plataformas cmasudd",
+      "role": "webs",
+      "depends_on": [
+        "T00"
+      ],
+      "status": "en_curso",
+      "owner": "/root/panorama_webs",
+      "output": "resultados/P02/",
+      "acceptance": [
+        "Cobertura y límites explícitos",
+        "Conectar proyectos en líneas de trabajo",
+        "Propuestas con evidencia existente y faltante, sin afirmar novedad"
+      ],
+      "blocker": null,
+      "model": "gpt-6.1-sol",
+      "budget": {
+        "tokens_orientativos": 8000,
+        "limite_duro": false
+      }
+    },
+    {
+      "id": "P03",
+      "title": "Visión general y propuestas de publicaciones",
+      "role": "coordinador",
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "status": "pendiente",
+      "owner": "coordinador",
+      "output": "resultados/P03/",
+      "acceptance": [
+        "Cobertura y límites explícitos",
+        "Conectar proyectos en líneas de trabajo",
+        "Propuestas con evidencia existente y faltante, sin afirmar novedad"
+      ],
+      "blocker": null,
+      "model": null,
+      "budget": {
+        "tokens_orientativos": 8000,
+        "limite_duro": false
+      }
     }
   ]
 }
