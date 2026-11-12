@@ -1,0 +1,275 @@
+{
+  "task": "V01",
+  "status": "en_revision",
+  "observed_at": "2026-11-12",
+  "model_assignment": "gpt-6.1-sol",
+  "source_commit": "40a9b429aa90c89caf567844cf157dd872c65cdf",
+  "evidence": [
+    {
+      "id": "V01-E01",
+      "claim": "Main resuelto a commit 40a9b429; árbol completo truncated=false",
+      "classification": "observado_directamente",
+      "source": "https://api.github.com/repos/AleReb/estacion-calidad-aire/git/trees/5679b150875ad978a72e559aa3bb4e500ad88804?recursive=1",
+      "locator": "$.sha; $.truncated; $.tree",
+      "version_or_sha256": "40a9b429aa90c89caf567844cf157dd872c65cdf",
+      "observed_at": "2026-11-12",
+      "method": "Conector GitHub GET commits/main y GET árbol recursivo",
+      "limitations": "Versión al momento de consulta; no implica estado operativo",
+      "visibility": "public",
+      "commit_lookup_url": "https://api.github.com/repos/AleReb/estacion-calidad-aire/commits/main"
+    },
+    {
+      "id": "V01-E02",
+      "claim": "Campaña 11–28/10/2025, SINCA Las Condes, cinco de seis módulos; RLS por tres bandas térmicas con 80% ajuste/20% prueba declarados",
+      "classification": "declarado_por_documentacion",
+      "source": "https://github.com/AleReb/estacion-calidad-aire/blob/40a9b429aa90c89caf567844cf157dd872c65cdf/documentacion/informes-pruebas/campo/co-ubicacion-sinca/calibracion-sinca-1.pdf",
+      "locator": "p.1: introducción, metodología y advertencia de concentraciones sin correcciones",
+      "version_or_sha256": "40a9b429aa90c89caf567844cf157dd872c65cdf",
+      "observed_at": "2026-11-12",
+      "method": "PDF público descargado a commit; pdftotext -layout; lectura de texto completo",
+      "limitations": "Cabecera 17/10 precede fin declarado; faltan identidad de equipos, split reproducible, muestreo y QA/QC. SO2 anunciado no tiene sección de resultados.",
+      "visibility": "public",
+      "sha256": "cbcc1b0afbce0d469b1ef7dbbb326b628bf2cd586a939ea14460d29ad9444eda",
+      "git_blob": "5ab171004a86cec6d3f82e7100046c1b86865e63"
+    },
+    {
+      "id": "V01-E03",
+      "claim": "Figuras inspeccionadas nombran módulos 2–6; Pearson NO pasa de 0.29/0.25/0.20/0.30/0.22 a 0.56/0.54/0.55/0.61/0.57; CO posterior 0.28–0.32",
+      "classification": "observado_directamente_en_documento",
+      "source": "https://github.com/AleReb/estacion-calidad-aire/blob/40a9b429aa90c89caf567844cf157dd872c65cdf/documentacion/informes-pruebas/campo/co-ubicacion-sinca/calibracion-sinca-1.pdf",
+      "locator": "pp.2–3, figuras 1.1–1.3 y heatmaps; p.9 figuras 4.2–4.3 y heatmap",
+      "version_or_sha256": "40a9b429aa90c89caf567844cf157dd872c65cdf",
+      "observed_at": "2026-11-12",
+      "method": "pdftoppm páginas 2,3,9 a 1800px; view_image, transcripción visual",
+      "limitations": "No recálculo ni validación independiente; gráficos no sustituyen series. Banda alta figura1.2 20–30°C frente a >20°C en texto.",
+      "visibility": "public",
+      "sha256": "cbcc1b0afbce0d469b1ef7dbbb326b628bf2cd586a939ea14460d29ad9444eda",
+      "git_blob": "5ab171004a86cec6d3f82e7100046c1b86865e63"
+    },
+    {
+      "id": "V01-E04",
+      "claim": "Autores reportan mejora correlación NO/NO2/OX y ausencia de mejora/empeoramiento CO; errores textuales en nombres de gases",
+      "classification": "declarado_por_documentacion",
+      "source": "https://github.com/AleReb/estacion-calidad-aire/blob/40a9b429aa90c89caf567844cf157dd872c65cdf/documentacion/informes-pruebas/campo/co-ubicacion-sinca/calibracion-sinca-1.pdf",
+      "locator": "pp.1,3 (NO/NO2 llamados carbono), pp.3,5,7,9–10 (interpretación y conclusión)",
+      "version_or_sha256": "40a9b429aa90c89caf567844cf157dd872c65cdf",
+      "observed_at": "2026-11-12",
+      "method": "Lectura completa de texto PDF",
+      "limitations": "No demuestra reducción de error, deriva, completitud ni generalización; no verificar mecanismos con Pearson.",
+      "visibility": "public",
+      "sha256": "cbcc1b0afbce0d469b1ef7dbbb326b628bf2cd586a939ea14460d29ad9444eda",
+      "git_blob": "5ab171004a86cec6d3f82e7100046c1b86865e63"
+    },
+    {
+      "id": "V01-E05",
+      "claim": "Ensayo Estación5 de 11/11/2025 10:00–13:52 mide offset electrónico sin sensor B4 en cinco ISB DBI01–05; responsable Luis Gómez y Alejandro revisor; equipos identificados por modelo",
+      "classification": "declarado_por_documentacion",
+      "source": "https://github.com/AleReb/estacion-calidad-aire/blob/40a9b429aa90c89caf567844cf157dd872c65cdf/documentacion/informes-pruebas/laboratorio/condiciones-controladas/Volt_Circuito_abierto_ISB_alphasense_est05/Voltage_circuito_abierto_alphasense_estacion_5.pdf",
+      "locator": "pp.1–3: portada, propósito, procedimiento y equipamiento",
+      "version_or_sha256": "40a9b429aa90c89caf567844cf157dd872c65cdf",
+      "observed_at": "2026-11-12",
+      "method": "PDF leído completo y fuente .tex leída por conector GitHub",
+      "limitations": "Sin certificados, alimentación exacta por registro, temperatura ambiente, seriales o vínculo inequívoco con campaña octubre.",
+      "visibility": "public",
+      "sha256": "84ba44b86804b37da9acd7383e8e1f406f9fe55eedbae75a084e571f3b77f72a",
+      "git_blob": "b3f2445c6da80c84d5926b9fed8f60f04df95491"
+    },
+    {
+      "id": "V01-E06",
+      "claim": "Existen tablas de 10 valores OP1/OP2 por instrumento para cinco placas; ejemplos CO 352/341 mV vs375/370 y SO2 354/359 vs384/397",
+      "classification": "observado_directamente_en_documento",
+      "source": "https://github.com/AleReb/estacion-calidad-aire/blob/40a9b429aa90c89caf567844cf157dd872c65cdf/documentacion/informes-pruebas/laboratorio/condiciones-controladas/Volt_Circuito_abierto_ISB_alphasense_est05/Voltage_circuito_abierto_alphasense_estacion_5.pdf",
+      "locator": "p.4 tablas1–2, introducción tabla1 y figura6",
+      "version_or_sha256": "40a9b429aa90c89caf567844cf157dd872c65cdf",
+      "observed_at": "2026-11-12",
+      "method": "pdftotext -layout y contraste fuente LaTeX",
+      "limitations": "Son valores documentados, no medidas reproducidas. Introducción tabla1 dice osciloscopio y caption multímetro. No series temporales de réplicas.",
+      "visibility": "public",
+      "sha256": "84ba44b86804b37da9acd7383e8e1f406f9fe55eedbae75a084e571f3b77f72a",
+      "git_blob": "b3f2445c6da80c84d5926b9fed8f60f04df95491"
+    },
+    {
+      "id": "V01-E07",
+      "claim": "Bibliografía cita manual ISB Issue7/085-2217, AAN803-05, B4 y manuales equipos; recomienda muestreo temporal, control térmico y conservar pares placa-sensor",
+      "classification": "declarado_por_documentacion",
+      "source": "https://github.com/AleReb/estacion-calidad-aire/blob/40a9b429aa90c89caf567844cf157dd872c65cdf/documentacion/informes-pruebas/laboratorio/condiciones-controladas/Volt_Circuito_abierto_ISB_alphasense_est05/Voltage_circuito_abierto_alphasense_estacion_5.pdf",
+      "locator": "pp.5–6: Análisis, Conclusiones, Recomendaciones y References",
+      "version_or_sha256": "40a9b429aa90c89caf567844cf157dd872c65cdf",
+      "observed_at": "2026-11-12",
+      "method": "Lectura de PDF y LaTeX",
+      "limitations": "Referencias externas no verificadas; recomendaciones y explicaciones no son resultados confirmados por agente.",
+      "visibility": "public",
+      "sha256": "84ba44b86804b37da9acd7383e8e1f406f9fe55eedbae75a084e571f3b77f72a",
+      "git_blob": "b3f2445c6da80c84d5926b9fed8f60f04df95491"
+    },
+    {
+      "id": "V01-E08",
+      "claim": "En datos/ hay 12 blobs todos .gitkeep cero bytes; consulta por extensiones CSV/XLS/XLSX/JSON/JSONL/Parquet/R/Python/ipynb sin coincidencias; no se recuperan crudos ni scripts",
+      "classification": "observado_directamente",
+      "source": "https://api.github.com/repos/AleReb/estacion-calidad-aire/git/trees/5679b150875ad978a72e559aa3bb4e500ad88804?recursive=1",
+      "locator": "$.tree filtrado datos/; rutas de ambos informes; consulta por extensiones sobre árbol completo",
+      "version_or_sha256": "40a9b429aa90c89caf567844cf157dd872c65cdf",
+      "observed_at": "2026-11-12",
+      "method": "Conector árbol recursivo no truncado; filtrado de metadatos",
+      "limitations": "No demuestra inexistencia fuera del repo o en otros formatos; no inspección indiscriminada de todos los contenidos",
+      "visibility": "public",
+      "data_entries": [
+        {
+          "path": "datos/datos-muestra/datos-procesados/indices-calidad-aire/.gitkeep",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0,
+          "url": "https://api.github.com/repos/AleReb/estacion-calidad-aire/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "datos/datos-muestra/datos-procesados/promedios-horarios/.gitkeep",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0,
+          "url": "https://api.github.com/repos/AleReb/estacion-calidad-aire/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "datos/datos-muestra/datos-procesados/resumenes-diarios/.gitkeep",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0,
+          "url": "https://api.github.com/repos/AleReb/estacion-calidad-aire/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "datos/datos-muestra/mediciones-brutas/banderas-calidad/.gitkeep",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0,
+          "url": "https://api.github.com/repos/AleReb/estacion-calidad-aire/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "datos/datos-muestra/mediciones-brutas/datos-1-minuto/.gitkeep",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0,
+          "url": "https://api.github.com/repos/AleReb/estacion-calidad-aire/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "datos/datos-muestra/mediciones-brutas/datos-diagnostico/.gitkeep",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0,
+          "url": "https://api.github.com/repos/AleReb/estacion-calidad-aire/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "datos/datos-referencia/estandares-referencia-mp/.gitkeep",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0,
+          "url": "https://api.github.com/repos/AleReb/estacion-calidad-aire/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "datos/datos-referencia/gases-calibracion/.gitkeep",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0,
+          "url": "https://api.github.com/repos/AleReb/estacion-calidad-aire/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "datos/datos-referencia/referencias-meteorologicas/.gitkeep",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0,
+          "url": "https://api.github.com/repos/AleReb/estacion-calidad-aire/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "datos/datos-validacion/conjuntos-datos-co-ubicacion/.gitkeep",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0,
+          "url": "https://api.github.com/repos/AleReb/estacion-calidad-aire/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "datos/datos-validacion/presupuestos-incertidumbre/.gitkeep",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0,
+          "url": "https://api.github.com/repos/AleReb/estacion-calidad-aire/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "datos/datos-validacion/resultados-intercomparacion/.gitkeep",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0,
+          "url": "https://api.github.com/repos/AleReb/estacion-calidad-aire/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        }
+      ]
+    },
+    {
+      "id": "V01-E09",
+      "claim": "No está demostrada correspondencia entre offsets noviembre Est5 y calibraciones de campo octubre; B condicionada a recuperar pares y pipeline",
+      "classification": "inferencia",
+      "source": "https://github.com/AleReb/estacion-calidad-aire/blob/40a9b429aa90c89caf567844cf157dd872c65cdf/documentacion/informes-pruebas/campo/co-ubicacion-sinca/calibracion-sinca-1.pdf",
+      "locator": "Comparación temporal p.1 campo con p.1 laboratorio y tablas de ambos",
+      "version_or_sha256": "40a9b429aa90c89caf567844cf157dd872c65cdf",
+      "observed_at": "2026-11-12",
+      "method": "Síntesis documental, sin análisis experimental",
+      "limitations": "No prueba inexistencia del vínculo; no selecciona paper ni establece novedad",
+      "visibility": "public",
+      "related_source": "https://github.com/AleReb/estacion-calidad-aire/blob/40a9b429aa90c89caf567844cf157dd872c65cdf/documentacion/informes-pruebas/laboratorio/condiciones-controladas/Volt_Circuito_abierto_ISB_alphasense_est05/Voltage_circuito_abierto_alphasense_estacion_5.pdf",
+      "git_blob": "5ab171004a86cec6d3f82e7100046c1b86865e63"
+    },
+    {
+      "id": "V01-E10",
+      "claim": "PDF laboratorio 6p creado17/11/2025; campo10p creado04/11/2025; bytes y hashes coinciden con árbol",
+      "classification": "observado_directamente",
+      "source": "https://github.com/AleReb/estacion-calidad-aire/blob/40a9b429aa90c89caf567844cf157dd872c65cdf/documentacion/informes-pruebas/campo/co-ubicacion-sinca/calibracion-sinca-1.pdf",
+      "locator": "PDF metadata CreationDate/Pages; bytes locales; Git blob de ambos PDF",
+      "version_or_sha256": "40a9b429aa90c89caf567844cf157dd872c65cdf",
+      "observed_at": "2026-11-12",
+      "method": "pdfinfo, SHA256 y SHA1 Git blob recalculados",
+      "limitations": "Metadata de creación no equivale a fecha de ensayo ni atribución confirmada",
+      "visibility": "public",
+      "related_source": "https://github.com/AleReb/estacion-calidad-aire/blob/40a9b429aa90c89caf567844cf157dd872c65cdf/documentacion/informes-pruebas/laboratorio/condiciones-controladas/Volt_Circuito_abierto_ISB_alphasense_est05/Voltage_circuito_abierto_alphasense_estacion_5.pdf",
+      "git_blob": "5ab171004a86cec6d3f82e7100046c1b86865e63"
+    }
+  ],
+  "related_tex": {
+    "url": "https://github.com/AleReb/estacion-calidad-aire/blob/40a9b429aa90c89caf567844cf157dd872c65cdf/documentacion/informes-pruebas/laboratorio/condiciones-controladas/Volt_Circuito_abierto_ISB_alphasense_est05/Voltage_circuito_abierto_alphasense_estacion_5.tex",
+    "git_blob": "253d0d3ae892d83dbea5a45c1cee3a0d6a33db1b",
+    "method": "GitHub fetch_file al commit fijado, lectura completa"
+  },
+  "temporary_artifacts": {
+    "laboratorio_pdf": "/tmp/v01-aire/laboratorio.pdf",
+    "laboratorio_text": "/tmp/v01-aire/laboratorio.txt",
+    "campo_pdf": "/tmp/v01-aire/campo.pdf",
+    "campo_text": "/tmp/v01-aire/campo.txt",
+    "figures": [
+      "/tmp/v01-aire/campo-p2.png",
+      "/tmp/v01-aire/campo-p3.png",
+      "/tmp/v01-aire/campo-p9.png"
+    ],
+    "note": "Derivados temporales, no versionados, pueden expirar"
+  },
+  "verification": {
+    "reports_read": 2,
+    "pages_text_read": 16,
+    "field_pages_visually_inspected": [
+      2,
+      3,
+      9
+    ],
+    "download_failures": 0,
+    "firmware_executed": false,
+    "production_accessed": false,
+    "statistics_recomputed": false
+  },
+  "limitations": "Sin revisión bibliográfica ni selección de revista; acceso público documental; permisos de publicación y contribuciones por confirmar."
+}

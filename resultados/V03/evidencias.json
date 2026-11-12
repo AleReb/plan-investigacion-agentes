@@ -1,0 +1,739 @@
+{
+  "task": "V03",
+  "status": "en_revision",
+  "model": "gpt-6.1-sol",
+  "observed_at": "2026-11-12",
+  "evidence": [
+    {
+      "id": "V03-E01",
+      "claim": "Fuente local fijada; HEAD limpio antes/después, origin AleReb.",
+      "classification": "observado directamente",
+      "source": "/home/ale/Documents/repos/voluntariosxagua",
+      "locator": "git rev-parse HEAD; git status --porcelain=v1; git remote -v; git ls-files docs/data/measurements.json",
+      "version_or_sha256": {
+        "commit": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+        "origin": "https://github.com/AleReb/voluntariosxagua.git"
+      },
+      "observed_at": "2026-11-12",
+      "method": "Git local de lectura; status y ls-files JSON sin salida.",
+      "limitations": "JSON ignorado: su hash es independiente del commit. No fetch/pull ni cambios fuente.",
+      "visibility": "revision_local_sin_datos_personales"
+    },
+    {
+      "id": "V03-E02",
+      "claim": "Existen dos repositorios remotos distintos, ambos main y públicos.",
+      "classification": "observado directamente",
+      "source": [
+        "https://github.com/AleReb/voluntariosxagua",
+        "https://github.com/cmasudd/voluntariosxagua"
+      ],
+      "locator": "get_repo.repository_full_name/id/default_branch/visibility",
+      "version_or_sha256": [
+        {
+          "repository": "AleReb/voluntariosxagua",
+          "id": "1453282587",
+          "default_branch": "main",
+          "visibility": "public"
+        },
+        {
+          "repository": "cmasudd/voluntariosxagua",
+          "id": "1453371614",
+          "default_branch": "main",
+          "visibility": "public"
+        }
+      ],
+      "observed_at": "2026-11-12",
+      "method": "Conector GitHub get_repo una llamada por repositorio; search_branches(main) una por repositorio.",
+      "limitations": "Metadatos normalizados no incluyen fork/parent: no etiquetar formalmente fork ni decidir canónico.",
+      "visibility": "revision_local_sin_datos_personales"
+    },
+    {
+      "id": "V03-E03",
+      "claim": "HEADs main remotos distintos; AleReb declara merge de cmasudd en mensaje de commit.",
+      "classification": "observado directamente",
+      "source": [
+        "https://github.com/AleReb/voluntariosxagua/commit/1f3dcbeb5bda77209deb0660123f463a6d78cdd9",
+        "https://github.com/cmasudd/voluntariosxagua/commit/ec04425e03129bfbb7f35dd65dc176cf69d45723"
+      ],
+      "locator": "fetch_commit(main): commit.sha/message/html_url/created_at",
+      "version_or_sha256": [
+        {
+          "repository": "AleReb/voluntariosxagua",
+          "sha": "1f3dcbeb5bda77209deb0660123f463a6d78cdd9",
+          "message": "Merge pull request #1 from cmasudd/main\n\nCorregir visualización de datos y mejorar la web",
+          "url": "https://github.com/AleReb/voluntariosxagua/commit/1f3dcbeb5bda77209deb0660123f463a6d78cdd9",
+          "created_at": "2026-11-11T16:11:49Z"
+        },
+        {
+          "repository": "cmasudd/voluntariosxagua",
+          "sha": "ec04425e03129bfbb7f35dd65dc176cf69d45723",
+          "message": "Clarify parameters and show measured values",
+          "url": "https://github.com/cmasudd/voluntariosxagua/commit/ec04425e03129bfbb7f35dd65dc176cf69d45723",
+          "created_at": "2026-11-11T01:24:29Z"
+        }
+      ],
+      "observed_at": "2026-11-12",
+      "method": "Conector GitHub fetch_commit una llamada por repositorio.",
+      "limitations": "Mensaje por sí solo no prueba integración; se respalda con compare V03-E04. No se atribuye autoría exclusiva.",
+      "visibility": "revision_local_sin_datos_personales"
+    },
+    {
+      "id": "V03-E04",
+      "claim": "Ambos remotos descienden del HEAD local; AleReb remoto contiene cmasudd HEAD con un commit adicional y files vacío.",
+      "classification": "observado directamente",
+      "source": [
+        "https://github.com/AleReb/voluntariosxagua/compare/2e08e016df32e8f8b765af5f20abdde0308c0b13...1f3dcbeb5bda77209deb0660123f463a6d78cdd9",
+        "https://github.com/cmasudd/voluntariosxagua/compare/2e08e016df32e8f8b765af5f20abdde0308c0b13...ec04425e03129bfbb7f35dd65dc176cf69d45723",
+        "https://github.com/AleReb/voluntariosxagua/compare/ec04425e03129bfbb7f35dd65dc176cf69d45723...1f3dcbeb5bda77209deb0660123f463a6d78cdd9"
+      ],
+      "locator": "compare_commits status/ahead_by/behind_by/merge_base_commit.sha/files",
+      "version_or_sha256": [
+        {
+          "repository": "AleReb/voluntariosxagua",
+          "base": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+          "head": "1f3dcbeb5bda77209deb0660123f463a6d78cdd9"
+        },
+        {
+          "repository": "cmasudd/voluntariosxagua",
+          "base": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+          "head": "ec04425e03129bfbb7f35dd65dc176cf69d45723"
+        },
+        {
+          "repository": "AleReb/voluntariosxagua",
+          "base": "ec04425e03129bfbb7f35dd65dc176cf69d45723",
+          "head": "1f3dcbeb5bda77209deb0660123f463a6d78cdd9"
+        }
+      ],
+      "observed_at": "2026-11-12",
+      "method": "Tres comparaciones conector GitHub, una por par, fijadas por SHA. Resultados íntegros normalizados en remote.comparisons.",
+      "limitations": "files=[] significa ninguna diferencia de archivos reportada entre extremos; no se descargaron árboles completos ni se verificaron despliegues. Historia y commit HEAD siguen distintos.",
+      "visibility": "revision_local_sin_datos_personales"
+    },
+    {
+      "id": "V03-E05",
+      "claim": "Mapeo local Canelo_Maipo→canelo-maipo, columnas y conversión leídos sin ejecución.",
+      "classification": "observado directamente",
+      "source": "/home/ale/Documents/repos/voluntariosxagua/scripts/build_site_data.py",
+      "locator": "líneas 14,25–58,61–79,113–150",
+      "version_or_sha256": {
+        "commit": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+        "git_blob": "12c76bd2f4d4fe38cef099cdcadcf76209584928",
+        "sha256": "7d03fb581666621b114931459ef370d5634c20a2157df3ec88d96c541dbd0441"
+      },
+      "observed_at": "2026-11-12",
+      "method": "Lectura numerada de código estático.",
+      "limitations": "No ejecutar/importar generador. Metadatos geográficos cambiaron en remotos: auditoría restringida a archivos locales.",
+      "visibility": "revision_local_sin_datos_personales"
+    },
+    {
+      "id": "V03-E06",
+      "claim": "XLSX local; Canelo primeros meses abril-junio 2022, filas3–5 en sheet7.xml.",
+      "classification": "observado directamente",
+      "source": "/home/ale/Documents/repos/voluntariosxagua/abril2022anov2026_VPA.xlsx",
+      "locator": "xl/workbook.xml Canelo_Maipo rId7; xl/_rels/workbook.xml.rels; xl/worksheets/sheet7.xml!A1:J5; xl/sharedStrings.xml",
+      "version_or_sha256": {
+        "commit": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+        "git_blob": "76fa88c162563d954a761a764622820a1d7581cd",
+        "sha256": "4fe06c1d6426060563108cb07092ed1d90b22bc6c72dc6aa7f2b887d2edaf108",
+        "worksheet_xml_sha256": "7e8b57a8f502d7e76dd7b4202f49459d001f6cb0202e61d7ac37e2aa3d4f728e"
+      },
+      "observed_at": "2026-11-12",
+      "method": "Python propio zipfile+ElementTree; resolución de relación, lectura de fechas de Canelo para fijar primeros 3 meses y solo valores de esas filas.",
+      "limitations": "No se auditó todo el libro ni la validez física de valores; sin información de procedencia KoboCollect, responsable/calibración.",
+      "visibility": "revision_local_sin_datos_personales"
+    },
+    {
+      "id": "V03-E07",
+      "claim": "Tres registros locales únicos por fecha; 27 campos coinciden numéricamente/nulos con XLSX.",
+      "classification": "observado directamente",
+      "source": "/home/ale/Documents/repos/voluntariosxagua/docs/data/measurements.json",
+      "locator": "$.records[2], $.records[9], $.records[16] (base0); stationId=canelo-maipo; date=2022-04-03/2022-05-01/2022-06-05; $.source",
+      "version_or_sha256": {
+        "sha256": "8d9232b3d764c7a0194a5197989c6c41400ab37a45560cd54bb4fa96f8753de9",
+        "git_tracked": false
+      },
+      "observed_at": "2026-11-12",
+      "method": "json.load, Decimal para comparación numérica, conteo de emparejamientos por estación-fecha y de registros del período; resultados detallados en audit.",
+      "limitations": "No prueba cuándo/con qué versión se generó JSON ni su publicación; sin comparación con JSON remoto/desplegado. Coincidencia local puntual no generalizable.",
+      "visibility": "revision_local_sin_datos_personales"
+    },
+    {
+      "id": "V03-E08",
+      "claim": "Propuesta C investiga procedencia y documentación; viabilidad condicionada, sin novedad demostrada.",
+      "classification": "inferencia",
+      "source": "/home/ale/Documents/repos/plan-investigacion-agentes/PROPUESTAS_PUBLICACIONES.md",
+      "locator": "sección C, apoyada en V03-E04–07",
+      "version_or_sha256": {
+        "sha256": "c6b7764b7e6393ced2c5fe3546c8e6924701e047f2c55323c3479b6953e20e5e"
+      },
+      "observed_at": "2026-11-12",
+      "method": "Contrastar requisitos de propuesta C con evidencia recuperada.",
+      "limitations": "No bibliografía ni selección editorial; requieren derechos, responsable, diccionario, QA/QC y extensión del audit.",
+      "visibility": "revision_local_sin_datos_personales"
+    },
+    {
+      "id": "V03-E09",
+      "claim": "Alcance V03 y plantillas revisados.",
+      "classification": "observado directamente",
+      "source": "/home/ale/Documents/repos/plan-investigacion-agentes",
+      "locator": "AGENTS,CONTINUAR,README,P03,propuestas y plantillas",
+      "version_or_sha256": {
+        "AGENTS.md": "1f1e97b1122a65477c95a3e6f726b0f1a6b6aefc6c7b93e19febc3adf45ba197",
+        "CONTINUAR.md": "1936ad0b8402bce59802e1e79c36e431860385bf53314fdcea03263d0aa95752",
+        "README.md": "768da2ee92baa53fa6f8f6e9146714bebb04b72fca02fe8ec3b1d57cfb7b38ba",
+        "resultados/P03/informe.md": "58359ef36c4bc2cc25f98ba14181b2d92dd0a3c86f7afb112172ffef5ba210fe",
+        "PROPUESTAS_PUBLICACIONES.md": "c6b7764b7e6393ced2c5fe3546c8e6924701e047f2c55323c3479b6953e20e5e",
+        "plantillas/entrega.md": "39cf28634a3e1391003f2278c71ac917caa33f4310ec99c73d61761bf34eaf4e",
+        "plantillas/evidencia.json": "875e5170790be52580c00e4f4978dabaaf36e705d28209cccc856188d336adc6"
+      },
+      "observed_at": "2026-11-12",
+      "method": "Lectura de documentos locales y SHA-256.",
+      "limitations": "Plan compartido, hashes fijan versiones observadas; no modificar backlog.",
+      "visibility": "revision_local_sin_datos_personales"
+    }
+  ],
+  "remote": {
+    "coordinate_patch": {"repository":"AleReb/voluntariosxagua","commit":"1f3dcbeb5bda77209deb0660123f463a6d78cdd9","file":"scripts/build_site_data.py","patch":"@@ -23,13 +23,13 @@\n NS = {\"main\": MAIN_NS, \"rel\": REL_NS}\n \n SHEET_STATIONS = {\n-    \"Canelo_Maipo\": (\"canelo-maipo\", \"Canelo\", \"Maipo\", -33.576468, -70.452054),\n-    \"El Manzano_Maipo\": (\"manzano-maipo\", \"El Manzano\", \"Maipo\", -33.601013, -70.359791),\n-    \"El Manzano_Colorado\": (\"manzano-colorado\", \"El Manzano\", \"Colorado\", -33.601013, -70.359791),\n-    \"SanGab_Maipo\": (\"san-gabriel-maipo\", \"San Gabriel\", \"Maipo\", -33.786392, -70.229894),\n-    \"San Gab_Yeso\": (\"san-gabriel-yeso\", \"San Gabriel\", \"Yeso\", -33.786392, -70.229894),\n-    \"BM_estero\": (\"banos-morales-estero\", \"Baños Morales\", \"Estero\", -33.826691, -70.064452),\n-    \"BañosMorales_Volcán\": (\"banos-morales-volcan\", \"Baños Morales\", \"Volcán\", -33.826691, -70.064452),\n+    \"Canelo_Maipo\": (\"canelo-maipo\", \"Canelo\", \"Maipo\", -33.581603, -70.451175),\n+    \"El Manzano_Maipo\": (\"manzano-maipo\", \"El Manzano\", \"Maipo\", -33.596058, -70.373595),\n+    \"El Manzano_Colorado\": (\"manzano-colorado\", \"El Manzano\", \"Colorado\", -33.596058, -70.373595),\n+    \"SanGab_Maipo\": (\"san-gabriel-maipo\", \"San Gabriel\", \"Maipo\", -33.785561, -70.233058),\n+    \"San Gab_Yeso\": (\"san-gabriel-yeso\", \"San Gabriel\", \"Yeso\", -33.785490, -70.233003),\n+    \"BM_estero\": (\"banos-morales-estero\", \"Baños Morales\", \"Estero\", -33.826398, -70.064294),\n+    \"BañosMorales_Volcán\": (\"banos-morales-volcan\", \"Baños Morales\", \"Volcán\", -33.826415, -70.064776),\n }\n \n PARAMETERS = ["},
+    "metadata": [
+      {
+        "repository": "AleReb/voluntariosxagua",
+        "id": "1453282587",
+        "default_branch": "main",
+        "visibility": "public"
+      },
+      {
+        "repository": "cmasudd/voluntariosxagua",
+        "id": "1453371614",
+        "default_branch": "main",
+        "visibility": "public"
+      }
+    ],
+    "heads": [
+      {
+        "repository": "AleReb/voluntariosxagua",
+        "sha": "1f3dcbeb5bda77209deb0660123f463a6d78cdd9",
+        "message": "Merge pull request #1 from cmasudd/main\n\nCorregir visualización de datos y mejorar la web",
+        "url": "https://github.com/AleReb/voluntariosxagua/commit/1f3dcbeb5bda77209deb0660123f463a6d78cdd9",
+        "created_at": "2026-11-11T16:11:49Z"
+      },
+      {
+        "repository": "cmasudd/voluntariosxagua",
+        "sha": "ec04425e03129bfbb7f35dd65dc176cf69d45723",
+        "message": "Clarify parameters and show measured values",
+        "url": "https://github.com/cmasudd/voluntariosxagua/commit/ec04425e03129bfbb7f35dd65dc176cf69d45723",
+        "created_at": "2026-11-11T01:24:29Z"
+      }
+    ],
+    "comparisons": [
+      {
+        "repository_full_name": "AleReb/voluntariosxagua",
+        "base": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+        "head": "1f3dcbeb5bda77209deb0660123f463a6d78cdd9",
+        "status": "ahead",
+        "ahead_by": 6,
+        "behind_by": 0,
+        "total_commits": 6,
+        "too_large": null,
+        "base_commit": {
+          "sha": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+          "url": "https://api.github.com/repos/AleReb/voluntariosxagua/commits/2e08e016df32e8f8b765af5f20abdde0308c0b13",
+          "html_url": "https://github.com/AleReb/voluntariosxagua/commit/2e08e016df32e8f8b765af5f20abdde0308c0b13"
+        },
+        "merge_base_commit": {
+          "sha": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+          "url": "https://api.github.com/repos/AleReb/voluntariosxagua/commits/2e08e016df32e8f8b765af5f20abdde0308c0b13",
+          "html_url": "https://github.com/AleReb/voluntariosxagua/commit/2e08e016df32e8f8b765af5f20abdde0308c0b13"
+        },
+        "files": [
+          {
+            "filename": "docs/app.js",
+            "status": "modified",
+            "additions": 82,
+            "deletions": 53,
+            "changes": 135,
+            "previous_filename": null
+          },
+          {
+            "filename": "docs/index.html",
+            "status": "modified",
+            "additions": 15,
+            "deletions": 6,
+            "changes": 21,
+            "previous_filename": null
+          },
+          {
+            "filename": "docs/styles.css",
+            "status": "modified",
+            "additions": 30,
+            "deletions": 1,
+            "changes": 31,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/build_site_data.py",
+            "status": "modified",
+            "additions": 7,
+            "deletions": 7,
+            "changes": 14,
+            "previous_filename": null
+          }
+        ]
+      },
+      {
+        "repository_full_name": "cmasudd/voluntariosxagua",
+        "base": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+        "head": "ec04425e03129bfbb7f35dd65dc176cf69d45723",
+        "status": "ahead",
+        "ahead_by": 5,
+        "behind_by": 0,
+        "total_commits": 5,
+        "too_large": null,
+        "base_commit": {
+          "sha": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+          "url": "https://api.github.com/repos/cmasudd/voluntariosxagua/commits/2e08e016df32e8f8b765af5f20abdde0308c0b13",
+          "html_url": "https://github.com/cmasudd/voluntariosxagua/commit/2e08e016df32e8f8b765af5f20abdde0308c0b13"
+        },
+        "merge_base_commit": {
+          "sha": "2e08e016df32e8f8b765af5f20abdde0308c0b13",
+          "url": "https://api.github.com/repos/cmasudd/voluntariosxagua/commits/2e08e016df32e8f8b765af5f20abdde0308c0b13",
+          "html_url": "https://github.com/cmasudd/voluntariosxagua/commit/2e08e016df32e8f8b765af5f20abdde0308c0b13"
+        },
+        "files": [
+          {
+            "filename": "docs/app.js",
+            "status": "modified",
+            "additions": 82,
+            "deletions": 53,
+            "changes": 135,
+            "previous_filename": null
+          },
+          {
+            "filename": "docs/index.html",
+            "status": "modified",
+            "additions": 15,
+            "deletions": 6,
+            "changes": 21,
+            "previous_filename": null
+          },
+          {
+            "filename": "docs/styles.css",
+            "status": "modified",
+            "additions": 30,
+            "deletions": 1,
+            "changes": 31,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/build_site_data.py",
+            "status": "modified",
+            "additions": 7,
+            "deletions": 7,
+            "changes": 14,
+            "previous_filename": null
+          }
+        ]
+      },
+      {
+        "repository_full_name": "AleReb/voluntariosxagua",
+        "base": "ec04425e03129bfbb7f35dd65dc176cf69d45723",
+        "head": "1f3dcbeb5bda77209deb0660123f463a6d78cdd9",
+        "status": "ahead",
+        "ahead_by": 1,
+        "behind_by": 0,
+        "total_commits": 1,
+        "too_large": null,
+        "base_commit": {
+          "sha": "ec04425e03129bfbb7f35dd65dc176cf69d45723",
+          "url": "https://api.github.com/repos/AleReb/voluntariosxagua/commits/ec04425e03129bfbb7f35dd65dc176cf69d45723",
+          "html_url": "https://github.com/AleReb/voluntariosxagua/commit/ec04425e03129bfbb7f35dd65dc176cf69d45723"
+        },
+        "merge_base_commit": {
+          "sha": "ec04425e03129bfbb7f35dd65dc176cf69d45723",
+          "url": "https://api.github.com/repos/AleReb/voluntariosxagua/commits/ec04425e03129bfbb7f35dd65dc176cf69d45723",
+          "html_url": "https://github.com/AleReb/voluntariosxagua/commit/ec04425e03129bfbb7f35dd65dc176cf69d45723"
+        },
+        "files": []
+      }
+    ]
+  },
+  "audit": {
+    "scope": "Canelo_Maipo / canelo-maipo primeros 3 meses disponibles",
+    "months": [
+      "2022-04",
+      "2022-05",
+      "2022-06"
+    ],
+    "worksheet_path": "xl/worksheets/sheet7.xml",
+    "sheet_attributes": {
+      "name": "Canelo_Maipo",
+      "sheetId": "7",
+      "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id": "rId7"
+    },
+    "workbookPr": {
+      "defaultThemeVersion": "166925"
+    },
+    "workbook_sha256": "4fe06c1d6426060563108cb07092ed1d90b22bc6c72dc6aa7f2b887d2edaf108",
+    "json_sha256": "8d9232b3d764c7a0194a5197989c6c41400ab37a45560cd54bb4fa96f8753de9",
+    "generator_sha256": "7d03fb581666621b114931459ef370d5634c20a2157df3ec88d96c541dbd0441",
+    "worksheet_xml_sha256": "7e8b57a8f502d7e76dd7b4202f49459d001f6cb0202e61d7ac37e2aa3d4f728e",
+    "json_source": "abril2022anov2026_VPA.xlsx",
+    "columns": {
+      "B": "conductivity",
+      "C": "hardness",
+      "D": "ph",
+      "E": "salinity",
+      "F": "tds",
+      "G": "waterTemp",
+      "H": "orp",
+      "I": "turbidity",
+      "J": "alkalinity"
+    },
+    "samples": [
+      {
+        "date": "2022-04-03",
+        "row": 3,
+        "date_cell": {
+          "ref": "A3",
+          "raw": "44654"
+        },
+        "json_indices_zero_based": [
+          2
+        ],
+        "json_match_count": 1,
+        "values": [
+          {
+            "cell": "B3",
+            "parameter": "conductivity",
+            "raw_xlsx": "1312",
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 1312,
+            "equal": true
+          },
+          {
+            "cell": "C3",
+            "parameter": "hardness",
+            "raw_xlsx": "600",
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 600,
+            "equal": true
+          },
+          {
+            "cell": "D3",
+            "parameter": "ph",
+            "raw_xlsx": "8.34",
+            "cell_type": "s",
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 8.34,
+            "equal": true
+          },
+          {
+            "cell": "E3",
+            "parameter": "salinity",
+            "raw_xlsx": "998",
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 998,
+            "equal": true
+          },
+          {
+            "cell": "F3",
+            "parameter": "tds",
+            "raw_xlsx": "1312",
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 1312,
+            "equal": true
+          },
+          {
+            "cell": "G3",
+            "parameter": "waterTemp",
+            "raw_xlsx": "13.5",
+            "cell_type": "s",
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 13.5,
+            "equal": true
+          },
+          {
+            "cell": "H3",
+            "parameter": "orp",
+            "raw_xlsx": null,
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": true,
+            "json_value": null,
+            "equal": true
+          },
+          {
+            "cell": "I3",
+            "parameter": "turbidity",
+            "raw_xlsx": null,
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": true,
+            "json_value": null,
+            "equal": true
+          },
+          {
+            "cell": "J3",
+            "parameter": "alkalinity",
+            "raw_xlsx": null,
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": true,
+            "json_value": null,
+            "equal": true
+          }
+        ]
+      },
+      {
+        "date": "2022-05-01",
+        "row": 4,
+        "date_cell": {
+          "ref": "A4",
+          "raw": "44682"
+        },
+        "json_indices_zero_based": [
+          9
+        ],
+        "json_match_count": 1,
+        "values": [
+          {
+            "cell": "B4",
+            "parameter": "conductivity",
+            "raw_xlsx": "2197",
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 2197,
+            "equal": true
+          },
+          {
+            "cell": "C4",
+            "parameter": "hardness",
+            "raw_xlsx": "400",
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 400,
+            "equal": true
+          },
+          {
+            "cell": "D4",
+            "parameter": "ph",
+            "raw_xlsx": "8.12",
+            "cell_type": "s",
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 8.12,
+            "equal": true
+          },
+          {
+            "cell": "E4",
+            "parameter": "salinity",
+            "raw_xlsx": "1037",
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 1037,
+            "equal": true
+          },
+          {
+            "cell": "F4",
+            "parameter": "tds",
+            "raw_xlsx": "1286",
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 1286,
+            "equal": true
+          },
+          {
+            "cell": "G4",
+            "parameter": "waterTemp",
+            "raw_xlsx": "9.8",
+            "cell_type": "s",
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 9.8,
+            "equal": true
+          },
+          {
+            "cell": "H4",
+            "parameter": "orp",
+            "raw_xlsx": null,
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": true,
+            "json_value": null,
+            "equal": true
+          },
+          {
+            "cell": "I4",
+            "parameter": "turbidity",
+            "raw_xlsx": null,
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": true,
+            "json_value": null,
+            "equal": true
+          },
+          {
+            "cell": "J4",
+            "parameter": "alkalinity",
+            "raw_xlsx": null,
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": true,
+            "json_value": null,
+            "equal": true
+          }
+        ]
+      },
+      {
+        "date": "2022-06-05",
+        "row": 5,
+        "date_cell": {
+          "ref": "A5",
+          "raw": "44717"
+        },
+        "json_indices_zero_based": [
+          16
+        ],
+        "json_match_count": 1,
+        "values": [
+          {
+            "cell": "B5",
+            "parameter": "conductivity",
+            "raw_xlsx": "2577",
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 2577,
+            "equal": true
+          },
+          {
+            "cell": "C5",
+            "parameter": "hardness",
+            "raw_xlsx": "420",
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 420,
+            "equal": true
+          },
+          {
+            "cell": "D5",
+            "parameter": "ph",
+            "raw_xlsx": "8.54",
+            "cell_type": "s",
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 8.54,
+            "equal": true
+          },
+          {
+            "cell": "E5",
+            "parameter": "salinity",
+            "raw_xlsx": "1293",
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 1293,
+            "equal": true
+          },
+          {
+            "cell": "F5",
+            "parameter": "tds",
+            "raw_xlsx": "1703",
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 1703,
+            "equal": true
+          },
+          {
+            "cell": "G5",
+            "parameter": "waterTemp",
+            "raw_xlsx": "10.2",
+            "cell_type": "s",
+            "formula": null,
+            "cell_absent": false,
+            "json_value": 10.2,
+            "equal": true
+          },
+          {
+            "cell": "H5",
+            "parameter": "orp",
+            "raw_xlsx": null,
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": true,
+            "json_value": null,
+            "equal": true
+          },
+          {
+            "cell": "I5",
+            "parameter": "turbidity",
+            "raw_xlsx": null,
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": true,
+            "json_value": null,
+            "equal": true
+          },
+          {
+            "cell": "J5",
+            "parameter": "alkalinity",
+            "raw_xlsx": null,
+            "cell_type": null,
+            "formula": null,
+            "cell_absent": true,
+            "json_value": null,
+            "equal": true
+          }
+        ]
+      }
+    ],
+    "json_period_count": 3,
+    "headers": {
+      "A1": "Time",
+      "B1": "Conductivity /uS/cm",
+      "C1": "Hardness /ppm",
+      "D1": "pH",
+      "E1": "Salininity /ppm",
+      "F1": "TDS /ppm",
+      "G1": "Temp water /C",
+      "H1": "ORP/mv",
+      "I1": "Turb",
+      "J1": "Alcalinidad",
+      "A2": "Tiempo",
+      "B2": "Conductividad/uS/cm",
+      "C2": "Dureza/ppm",
+      "D2": "pH",
+      "E2": "Salinidad /ppm",
+      "F2": "Solidos Totales /ppm",
+      "G2": "Temp agua /C",
+      "H2": "ORP/mv"
+    }
+  },
+  "validation": {
+    "numeric_fields_matched": 18,
+    "null_fields_matched": 9,
+    "mismatches": 0,
+    "unique_record_matches": true,
+    "source_rows": 3,
+    "json_records_in_scope": 3
+  },
+  "limits": [
+    "Sin modificaciones a fuente, backlog ni mediciones; sin generador, importación de código fuente, commit o despliegue.",
+    "Sin datos personales en artefactos. Sin reintentos necesarios en accesos remotos."
+  ]
+}

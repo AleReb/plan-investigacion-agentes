@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-11",
-  "execution": "T01/T02/P01/P02 completadas con gpt-6.1-sol y revisadas; P03 sintetizada; próxima tanda V01–V03 pendiente",
+  "updated_at": "2026-11-12",
+  "execution": "V01–V03 completadas y revisadas. A principal, C alternativa; B condicionada. A01/A02 siguientes, sin ejecución en segundo plano.",
   "tasks": [
     {
       "id": "T00",
@@ -358,8 +358,8 @@
       "depends_on": [
         "P03"
       ],
-      "status": "lista",
-      "owner": null,
+      "status": "aceptada",
+      "owner": "/root/piloto_airflow",
       "output": "resultados/V01/",
       "acceptance": [
         "Leer alcance en resultados/P03/informe.md",
@@ -368,7 +368,13 @@
       ],
       "blocker": null,
       "model": "gpt-6.1-sol",
-      "budget": null
+      "budget": {
+        "tokens_orientativos": 8000,
+        "minutos": 30,
+        "intentos_por_acceso": 2,
+        "limite_duro": false
+      },
+      "reviewed_by": "coordinador"
     },
     {
       "id": "V02",
@@ -377,8 +383,8 @@
       "depends_on": [
         "P03"
       ],
-      "status": "lista",
-      "owner": null,
+      "status": "aceptada",
+      "owner": "/root/panorama_webs",
       "output": "resultados/V02/",
       "acceptance": [
         "Leer alcance en resultados/P03/informe.md",
@@ -387,7 +393,13 @@
       ],
       "blocker": null,
       "model": "gpt-6.1-sol",
-      "budget": null
+      "budget": {
+        "tokens_orientativos": 8000,
+        "minutos": 30,
+        "intentos_por_acceso": 2,
+        "limite_duro": false
+      },
+      "reviewed_by": "coordinador"
     },
     {
       "id": "V03",
@@ -396,8 +408,8 @@
       "depends_on": [
         "P03"
       ],
-      "status": "lista",
-      "owner": null,
+      "status": "aceptada",
+      "owner": "/root/piloto_agua",
       "output": "resultados/V03/",
       "acceptance": [
         "Leer alcance en resultados/P03/informe.md",
@@ -405,6 +417,85 @@
         "Fuentes/versiones y límites sin ejecutar producción"
       ],
       "blocker": null,
+      "model": "gpt-6.1-sol",
+      "budget": {
+        "tokens_orientativos": 8000,
+        "minutos": 30,
+        "intentos_por_acceso": 2,
+        "limite_duro": false
+      },
+      "reviewed_by": "coordinador"
+    },
+    {
+      "id": "A01",
+      "title": "Verificar tres escenarios offline de exportadores",
+      "role": "inventario_basico",
+      "depends_on": [
+        "V02"
+      ],
+      "status": "lista",
+      "owner": null,
+      "output": "resultados/A01/",
+      "acceptance": [
+        "Seguir protocolos/A_EVALUACION_OFFLINE.md",
+        "Resultados reproducibles con fixtures sintéticos y fuentes fijadas",
+        "No ejecutar producción ni acceder a credenciales"
+      ],
+      "blocker": null,
+      "model": "gpt-6.1-sol",
+      "budget": null
+    },
+    {
+      "id": "A02",
+      "title": "Literatura enfocada y diferenciación de propuesta A",
+      "role": "investigacion",
+      "depends_on": [
+        "V02"
+      ],
+      "status": "lista",
+      "owner": null,
+      "output": "resultados/A02/",
+      "acceptance": [
+        "Fuentes/versiones y límites explícitos",
+        "Entregar decisión que permita avanzar la publicación, sin inventar evidencia"
+      ],
+      "blocker": null,
+      "model": null,
+      "budget": null
+    },
+    {
+      "id": "C01",
+      "title": "Extender auditoría de trazabilidad ciudadana",
+      "role": "inventario_basico",
+      "depends_on": [
+        "V03"
+      ],
+      "status": "lista",
+      "owner": null,
+      "output": "resultados/C01/",
+      "acceptance": [
+        "Fuentes/versiones y límites explícitos",
+        "Entregar decisión que permita avanzar la publicación, sin inventar evidencia"
+      ],
+      "blocker": null,
+      "model": "gpt-6.1-sol",
+      "budget": null
+    },
+    {
+      "id": "B01",
+      "title": "Recuperar pares originales y scripts de campaña aire",
+      "role": "inventario_basico",
+      "depends_on": [
+        "V01"
+      ],
+      "status": "bloqueada",
+      "owner": null,
+      "output": "resultados/B01/",
+      "acceptance": [
+        "Fuentes/versiones y límites explícitos",
+        "Entregar decisión que permita avanzar la publicación, sin inventar evidencia"
+      ],
+      "blocker": "Series originales y scripts no localizados en fuentes revisadas; falta ubicación accesible",
       "model": "gpt-6.1-sol",
       "budget": null
     }

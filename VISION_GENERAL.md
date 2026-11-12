@@ -65,3 +65,7 @@ Estas arquitecturas son declaraciones documentales; no se inspeccionó el servid
 El portafolio ofrece una base plausible para publicaciones de sistemas y software, instrumentación, datos y casos de uso. Los artículos científicos con resultados requerirán preguntas y comparaciones específicas. Las notas técnicas, guías de operación y paquetes documentales también pueden comunicar aportes reales, sin convertir cada proyecto en un paper.
 
 La siguiente decisión es elegir qué líneas tienen mejor evidencia recuperable. Las propuestas y el orden inicial están en [PROPUESTAS_PUBLICACIONES.md](PROPUESTAS_PUBLICACIONES.md). LinkedIn servirá para completar cronología y roles, y el servidor para confirmar arquitecturas; ninguno debe bloquear la formulación preliminar de las líneas.
+
+## Actualización de viabilidad — 2026-11-12
+
+Se leyeron dos informes completos de aire y seis archivos de exportadores/pruebas/configuración, se reconciliaron historias Git de agua y se contrastaron tres registros locales con la planilla. El panorama mantiene su amplitud, pero la ruta inicial se concreta en A (contratos/trazabilidad), con C alternativa y B pendiente de fuentes originales. Ver [VIABILIDAD_PUBLICACIONES.md](VIABILIDAD_PUBLICACIONES.md).

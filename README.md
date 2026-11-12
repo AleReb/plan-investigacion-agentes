@@ -10,6 +10,10 @@ Este repositorio contiene el plan y una exploración inicial, no una auditoría 
 
 Por aclaración del usuario, la entrega principal es [la visión general](VISION_GENERAL.md) y [las propuestas de papers/publicaciones](PROPUESTAS_PUBLICACIONES.md). Ver `decisiones/D001-vision-general.md`. P01/P02/P03 están completadas; T01/T02 aportan evidencia inicial. Para retomar: [CONTINUAR.md](CONTINUAR.md).
 
+## Avance de viabilidad — 12 de noviembre
+
+Las tres verificaciones están completadas y revisadas. Consultar [VIABILIDAD_PUBLICACIONES.md](VIABILIDAD_PUBLICACIONES.md): A es la principal candidata, C la alternativa y B requiere recuperar datos originales. Hay [bibliografía exploratoria](bibliografia/EXPLORACION_2026-11-12.md) y un [protocolo preliminar](protocolos/A_EVALUACION_OFFLINE.md), aún sin ejecutar.
+
 ## Inicio
 
 1. Leer `AGENTS.md`, `docs/01-revision-inicial.md` y `docs/02-plan.md`.

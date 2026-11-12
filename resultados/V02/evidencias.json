@@ -1,0 +1,110 @@
+{
+  "task": "V02",
+  "status": "en_revision",
+  "observed_at": "2026-11-12",
+  "scope": {
+    "source_files_read": 6,
+    "tree_metadata_reads": 2,
+    "executed_source_tests": false,
+    "accessed_database": false,
+    "production_changes": false
+  },
+  "evidence": [
+    {
+      "id": "V02-E01",
+      "claim": "Comportamiento programado del exportador; esquema de salida y límites estáticos",
+      "classification": "observado_directamente",
+      "source": "https://api.github.com/repos/cmasudd/aireaconcagua/git/blobs/e642b5897a5c0927e6b71a00fbd29a15bffad7d4",
+      "locator": "scripts/export_monthly_csv.py; líneas 465 totales; localizadores específicos en informe.md",
+      "version_or_sha256": "git_blob_sha1:e642b5897a5c0927e6b71a00fbd29a15bffad7d4",
+      "observed_at": "2026-11-12",
+      "method": "Conector GitHub fetch al blob exacto; lectura estática completa",
+      "limitations": "No es commit ni versión desplegada. No se ejecutó código ni tests ni se comprobó contenido en BD.",
+      "visibility": "publica"
+    },
+    {
+      "id": "V02-E02",
+      "claim": "Pruebas existentes leídas, sin ejecutar",
+      "classification": "observado_directamente",
+      "source": "https://api.github.com/repos/cmasudd/aireaconcagua/git/blobs/c3cebebcc162f1b2401d5e66ad4623a5f808fe7a",
+      "locator": "tests/test_export_monthly_csv.py; líneas 86 totales; localizadores específicos en informe.md",
+      "version_or_sha256": "git_blob_sha1:c3cebebcc162f1b2401d5e66ad4623a5f808fe7a",
+      "observed_at": "2026-11-12",
+      "method": "Conector GitHub fetch al blob exacto; lectura estática completa",
+      "limitations": "No es commit ni versión desplegada. No se ejecutó código ni tests ni se comprobó contenido en BD.",
+      "visibility": "publica"
+    },
+    {
+      "id": "V02-E03",
+      "claim": "Configuración de estaciones, identidades y metadatos leídos",
+      "classification": "observado_directamente",
+      "source": "https://api.github.com/repos/cmasudd/aireaconcagua/git/blobs/7950303f56000ca420323e2f9f004a4eff90470c",
+      "locator": "config/stations.json; líneas 62 totales; localizadores específicos en informe.md",
+      "version_or_sha256": "git_blob_sha1:7950303f56000ca420323e2f9f004a4eff90470c",
+      "observed_at": "2026-11-12",
+      "method": "Conector GitHub fetch al blob exacto; lectura estática completa",
+      "limitations": "No es commit ni versión desplegada. No se ejecutó código ni tests ni se comprobó contenido en BD.",
+      "visibility": "publica"
+    },
+    {
+      "id": "V02-E04",
+      "claim": "Comportamiento programado del exportador; esquema de salida y límites estáticos",
+      "classification": "observado_directamente",
+      "source": "https://api.github.com/repos/cmasudd/calidadAgua/git/blobs/9b860d7f3b0eb15a1a81ee2efdda9ca8fed9f066",
+      "locator": "scripts/export_monthly_csv.py; líneas 139 totales; localizadores específicos en informe.md",
+      "version_or_sha256": "git_blob_sha1:9b860d7f3b0eb15a1a81ee2efdda9ca8fed9f066",
+      "observed_at": "2026-11-12",
+      "method": "Conector GitHub fetch al blob exacto; lectura estática completa",
+      "limitations": "No es commit ni versión desplegada. No se ejecutó código ni tests ni se comprobó contenido en BD.",
+      "visibility": "publica"
+    },
+    {
+      "id": "V02-E05",
+      "claim": "Pruebas existentes leídas, sin ejecutar",
+      "classification": "observado_directamente",
+      "source": "https://api.github.com/repos/cmasudd/calidadAgua/git/blobs/15201bce028c7a096aec3c5f01cb0d41bcf63675",
+      "locator": "tests/test_export_monthly_csv.py; líneas 51 totales; localizadores específicos en informe.md",
+      "version_or_sha256": "git_blob_sha1:15201bce028c7a096aec3c5f01cb0d41bcf63675",
+      "observed_at": "2026-11-12",
+      "method": "Conector GitHub fetch al blob exacto; lectura estática completa",
+      "limitations": "No es commit ni versión desplegada. No se ejecutó código ni tests ni se comprobó contenido en BD.",
+      "visibility": "publica"
+    },
+    {
+      "id": "V02-E06",
+      "claim": "Configuración de estaciones, identidades y metadatos leídos",
+      "classification": "observado_directamente",
+      "source": "https://api.github.com/repos/cmasudd/calidadAgua/git/blobs/177135e8d621be28283310db6a7dd18c24ed0a37",
+      "locator": "config/stations.json; líneas 10 totales; localizadores específicos en informe.md",
+      "version_or_sha256": "git_blob_sha1:177135e8d621be28283310db6a7dd18c24ed0a37",
+      "observed_at": "2026-11-12",
+      "method": "Conector GitHub fetch al blob exacto; lectura estática completa",
+      "limitations": "No es commit ni versión desplegada. No se ejecutó código ni tests ni se comprobó contenido en BD.",
+      "visibility": "publica"
+    },
+    {
+      "id": "V02-E07",
+      "claim": "Árbol público main sin truncamiento usado para seleccionar seis archivos",
+      "classification": "observado_directamente",
+      "source": "https://api.github.com/repos/cmasudd/aireaconcagua/git/trees/6e5918a40f1f643a0aaa8c1a9b13a3786434133b",
+      "locator": "sha; truncated=false; rutas scripts/export_monthly_csv.py, tests/test_export_monthly_csv.py, config/stations.json",
+      "version_or_sha256": "git_tree_sha1:6e5918a40f1f643a0aaa8c1a9b13a3786434133b",
+      "observed_at": "2026-11-12",
+      "method": "Conector GitHub fetch árbol recursivo main; filtrado de metadatos",
+      "limitations": "Listado no implica lectura del resto de archivos ni commit desplegado; datos y otros contenidos no descargados",
+      "visibility": "publica"
+    },
+    {
+      "id": "V02-E08",
+      "claim": "Árbol público main sin truncamiento usado para seleccionar seis archivos",
+      "classification": "observado_directamente",
+      "source": "https://api.github.com/repos/cmasudd/calidadAgua/git/trees/e58e0ff2f85ec60efe799fbb670dead5296e9b91",
+      "locator": "sha; truncated=false; rutas scripts/export_monthly_csv.py, tests/test_export_monthly_csv.py, config/stations.json",
+      "version_or_sha256": "git_tree_sha1:e58e0ff2f85ec60efe799fbb670dead5296e9b91",
+      "observed_at": "2026-11-12",
+      "method": "Conector GitHub fetch árbol recursivo main; filtrado de metadatos",
+      "limitations": "Listado no implica lectura del resto de archivos ni commit desplegado; datos y otros contenidos no descargados",
+      "visibility": "publica"
+    }
+  ]
+}

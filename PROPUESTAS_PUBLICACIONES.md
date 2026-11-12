@@ -2,6 +2,10 @@
 
 Fecha: 2026-11-11. Títulos y prioridades provisionales. Son propuestas del coordinador a partir de P01/P02/T01/T02; no se ha establecido novedad ni se han elegido revistas. Prioridad significa orden para comprobar viabilidad, no mérito científico demostrado.
 
+## Actualización 2026-11-12
+
+V01–V03 están completas. Se recomienda A como principal y C como alternativa; B queda condicionada a recuperar series/scripts. El detalle y la evidencia nueva están en [VIABILIDAD_PUBLICACIONES.md](VIABILIDAD_PUBLICACIONES.md). La lista original siguiente conserva el orden exploratorio del 11 de noviembre; no es el orden actualizado de ejecución.
+
 ## Lista corta para empezar
 
 | Orden de exploración | Propuesta | Motivo |

@@ -1,31 +1,34 @@
 # Punto de continuación
 
-Actualizado: 2026-11-11. El usuario pidió guardar el avance antes de agotar límites.
+Actualizado: 2026-11-12. El usuario pidió conservar avance antes de agotar límites. Todo el trabajo de esta tanda está en archivos versionables; no depende de procesos persistentes.
 
 ## Objetivo vigente
 
-Obtener una visión GENERAL del trabajo de Alejandro Rebolledo y proponer papers y publicaciones a partir de su portafolio. No centrar todo en modularAirFlow ni Voluntarios por el Agua. Integrar AleReb, webs cmasudd, sensores.cmasccp.cl (usuario administrador) y trayectoria/LinkedIn cuando se identifique. Ver decisiones/D001-vision-general.md.
+Visión GENERAL del trabajo de Alejandro Rebolledo para proponer papers/publicaciones. Integrar AleReb, webs cmasudd, sensores.cmasccp.cl (administrado por usuario) y trayectoria cuando se identifique. Usuario autorizó gpt-6.1-sol; conservar esa preferencia para tareas acotadas. No reducir el portafolio a dos proyectos.
 
-## Avance guardado
+## Completado
 
-- Plan y backlog creados; inventarios iniciales: 100 entradas AleReb, 13 cmasudd, cobertura no exhaustiva confirmada.
-- T01/T02: fichas de modularAirFlow y voluntariosxagua completadas con gpt-6.1-sol y aceptadas documentalmente tras revisión.
-- P01/P02: panoramas AleReb y webs cmasudd completados con gpt-6.1-sol, revisados; diez README representativos consultados por los agentes.
-- P03 completada: VISION_GENERAL.md y PROPUESTAS_PUBLICACIONES.md. Ocho familias personales, webs/plataformas y siete líneas editoriales. Prioridad exploratoria A (arquitectura de datos), B (evaluación de aire), C (datos ciudadanos).
-- Todos los agentes de esta tanda terminaron; no quedan agentes trabajando en segundo plano.
+- Plan, inventarios preliminares (100 AleReb y 13 cmasudd; cobertura incompleta), T01/T02/P01/P02/P03 y síntesis general.
+- V01: leídos dos PDF de aire (16 páginas). Campaña de co-ubicación identificada y ensayo electrónico sin sensores. Faltan series/scripts; no reproducir conclusiones desde gráficos.
+- V02: seis archivos reales; dos exportadores comparten patrón pero difieren en latest, faltantes, colisiones y publicación. Lectura estática, no tests ejecutados.
+- V03: historias remotas de voluntariosxagua relacionadas; checkout local anterior. Canelo abril-junio 2022: 18 valores+9 ausencias coinciden XLSX→JSON. No generalizar a todo dataset o despliegue.
+- Coordinador revisó entregas, repitió comparación local y Git, y contrastó exportadores y partes de PDF.
+- VIABILIDAD_PUBLICACIONES.md: A principal, C alternativa, B recuperación; D–G permanecen en cartera.
+- bibliografia/EXPLORACION_2026-11-12.md: tres fuentes primarias con alcance leído; no revisión completa ni novedad establecida.
+- protocolos/A_EVALUACION_OFFLINE.md: diseño preliminar no ejecutado. D002 documenta prioridad y acceso a A01/A02 sin exigir inventario exhaustivo.
 
-## Retomar en orden
+## Retomar
 
-1. Leer AGENTS.md, README.md, este archivo, VISION_GENERAL.md, PROPUESTAS_PUBLICACIONES.md y tareas/backlog.json; comprobar git status y commits recientes.
-2. Continuar con V01–V03, descritas en resultados/P03/informe.md: informes/datos de aire, exportadores/contratos, procedencia de datos ciudadanos. Estado lista, todavía sin ejecutar.
-3. Lanzar tareas acotadas con gpt-6.1-sol si sigue disponible, registrar presupuesto orientativo y dueño; no rehacer los panoramas completos.
-4. Revisar entregas y elegir publicación principal/alternativa según evidencia recuperable. Después realizar búsqueda bibliográfica primaria y definir protocolo; todavía no redactar resultados como si existieran.
-5. Mantener actualizado este archivo y guardar un commit local antes de cerrar o acercarse al límite de trabajo. Los archivos, no los procesos, sostienen la continuidad.
+1. Leer AGENTS, este archivo, VIABILIDAD_PUBLICACIONES, D002 y backlog; comprobar git status/log.
+2. A01: preparar banco reproducible offline para tres escenarios mínimos de V02 (colisión, sentinela/finitud, frontera de partición), con fuentes por hash, fixtures sintéticos y aislamiento de BD/env/main/red. Seguir protocolo; no ejecutar publicadores reales. gpt-6.1-sol + revisión.
+3. A02: ampliar literatura primaria sobre contratos/procedencia/publicación ambiental y diferenciación frente a ODM2 y alternativas. Leer métodos/resultados; tabla de diferencias y pregunta defendible, sin reclamar prioridad histórica.
+4. C01: extensión acotada a casos difíciles/versiones; no rehacer muestra ya contrastada. B01 espera localizar archivos originales; pedir ubicación concreta si ninguna fuente accesible los aporta, nunca credenciales en texto.
+5. Registrar resultados favorables y desfavorables, actualizar decisión y checkpoint; guardar commit local antes de cerrar. T08/T09 globales no están completos.
 
-## Límites y pendientes
+## Accesos, límites y continuidad
 
-LinkedIn exacto, acceso interno al servidor y significado/dispositivo de liberar hardware pendientes. No impiden panorama preliminar. Sin bibliografía comparativa aún: no afirmar novedad, aceptación editorial ni resultados no medidos. No compilar/cargar modularAirFlow. No modificar proyectos fuente ni producción. No publicar este repo sin revisar metadatos privados. No se subió a GitHub.
+LinkedIn exacto, acceso interno servidor y definición de liberar hardware pendientes. No impiden tareas A01/A02. No compilar/cargar modularAirFlow ni modificar repos fuente/producción. No publicar este repo sin revisar metadatos privados y permisos de materiales. No se ha enviado a GitHub ni contactado al equipo.
 
-## Agentes de esta sesión
+Los PDF/textos de V01 en /tmp/v01-aire son temporales: manifiesto guarda URLs al commit y hashes para volver a descargarlos; no confiar en su persistencia. Fuentes de V02 fijadas por blob, no commit desplegado. En V03 los JSON ignorados se identifican por hash, no por commit.
 
-/root/piloto_airflow: T01 y P01 terminadas; /root/piloto_agua: T02 terminada; /root/panorama_webs: P02 terminada. Modelo solicitado al lanzarlos: gpt-6.1-sol. IDs sirven solo como referencia de la sesión; los archivos son la continuidad durable. No hay daemon ni continuación automática configurada.
+Los tres agentes de esta tanda terminaron: piloto_airflow V01, panorama_webs V02, piloto_agua V03; modelo gpt-6.1-sol. No hay agente ni automatización trabajando en segundo plano. Reutilizar agentes si existen o crear nuevos con contexto mínimo; los archivos son la referencia durable. El entorno actual no tiene rg disponible; usar Python/find como alternativa si sigue faltando.
